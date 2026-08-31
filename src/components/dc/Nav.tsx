@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, useScroll, useSpring } from "motion/react";
 import { Magnetic } from "./Primitives";
 import logo from "@/assets/dream-corner-logo.png.asset.json";
 
