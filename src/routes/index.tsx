@@ -1,24 +1,51 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { Cursor } from "@/components/dc/Cursor";
+import { Grain } from "@/components/dc/Primitives";
+import { Nav } from "@/components/dc/Nav";
+import { Hero } from "@/components/dc/Hero";
+import { Story } from "@/components/dc/Story";
+import { Work } from "@/components/dc/Work";
+import { Services } from "@/components/dc/Services";
+import { Philosophy } from "@/components/dc/Philosophy";
+import { Proof } from "@/components/dc/Proof";
+import { Feed } from "@/components/dc/Feed";
+import { Contact } from "@/components/dc/Contact";
+
+const title = "Dream Corner — Luxury Event Planning in Bangalore";
+const description =
+  "Dream Corner designs and produces weddings, destination celebrations and brand evenings across Bangalore and India. A limited number of commissions each season.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Cursor />
+      <Grain />
+      <Nav />
+      <main>
+        <Hero />
+        <Story />
+        <Work />
+        <Services />
+        <Philosophy />
+        <Proof />
+        <Feed />
+        <Contact />
+      </main>
+    </>
   );
 }
