@@ -1,0 +1,61 @@
+import { CountUp, MaskLines, Reveal } from "./Primitives";
+
+const stats = [
+  { to: 240, suffix: "+", label: "Celebrations produced" },
+  { to: 13, suffix: " yrs", label: "In practice" },
+  { to: 19, suffix: "", label: "Cities & destinations" },
+  { to: 96, suffix: "%", label: "Clients by referral" },
+];
+
+const quotes = [
+  {
+    q: "They took a 700-guest wedding across three days in Coorg and made it feel like a private dinner. We were guests at our own celebration.",
+    a: "Anaya & Rohan M.",
+    m: "Three-day wedding, Coorg",
+  },
+  {
+    q: "The restraint is the thing. Nothing shouted, and yet every photograph looks staged by a film unit.",
+    a: "Priya Nair",
+    m: "Brand launch, UB City",
+  },
+];
+
+export function Proof() {
+  return (
+    <section className="relative overflow-hidden bg-ink py-28 md:py-36">
+      <div className="mx-auto max-w-[1600px] px-6 md:px-10">
+        <div className="grid gap-y-12 border-y border-border py-14 sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map((s, i) => (
+            <Reveal key={s.label} delay={i * 0.06} className="px-2">
+              <p className="display text-6xl text-brass md:text-7xl">
+                <CountUp to={s.to} suffix={s.suffix} />
+              </p>
+              <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
+                {s.label}
+              </p>
+            </Reveal>
+          ))}
+        </div>
+
+        <div className="mt-24 grid gap-16 lg:grid-cols-2 lg:gap-24">
+          {quotes.map((c, i) => (
+            <Reveal key={c.a} delay={i * 0.1}>
+              <blockquote>
+                <p className="display text-3xl leading-[1.25] md:text-[2.6rem]">
+                  <MaskLines lines={[`“${c.q}”`]} lineClassName="block" />
+                </p>
+                <footer className="mt-8 flex items-center gap-4">
+                  <span className="h-px w-10 bg-brass" />
+                  <span className="font-sans text-[11px] uppercase tracking-[0.26em]">{c.a}</span>
+                  <span className="font-sans text-[11px] tracking-[0.14em] text-muted-foreground">
+                    {c.m}
+                  </span>
+                </footer>
+              </blockquote>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

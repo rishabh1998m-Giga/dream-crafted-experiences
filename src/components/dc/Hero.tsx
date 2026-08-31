@@ -71,6 +71,7 @@ export function Hero() {
           <MaskLines
             lines={["Dreams,", "crafted into", "experiences."]}
             delay={0.15}
+            immediate
             lineClassName="[&:nth-child(2)]:italic"
           />
         </h1>

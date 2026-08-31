@@ -38,22 +38,26 @@ export function MaskLines({
   className,
   lineClassName,
   delay = 0,
+  immediate = false,
 }: {
   lines: string[];
   className?: string;
   lineClassName?: string;
   delay?: number;
+  immediate?: boolean;
 }) {
   const reduce = useReducedMotion();
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, amount: 0.1 });
+  const show = immediate || inView || reduce;
   return (
-    <span className={cn("block", className)}>
+    <span ref={ref} className={cn("block", className)}>
       {lines.map((line, i) => (
         <span key={line + i} className="block overflow-hidden">
           <motion.span
             className={cn("block", lineClassName)}
             initial={reduce ? false : { y: "110%" }}
-            whileInView={{ y: "0%" }}
-            viewport={{ once: true, margin: "-10% 0px" }}
+            animate={show ? { y: "0%" } : { y: "110%" }}
             transition={{ duration: 1.15, delay: delay + i * 0.09, ease: [0.16, 1, 0.3, 1] }}
           >
             {line}
