@@ -187,7 +187,7 @@ export function CountUp({ to, suffix = "" }: { to: number; suffix?: string }) {
     let raf = 0;
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting) return;
+        if (!entry?.isIntersecting) return;
         io.disconnect();
         const start = performance.now();
         const dur = 1800;
