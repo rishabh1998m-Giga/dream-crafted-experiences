@@ -80,8 +80,8 @@ export function Services() {
                 className="pointer-events-none absolute right-4 top-1/2 z-20 hidden h-[340px] w-[260px] -translate-y-1/2 overflow-hidden lg:block"
               >
                 <img
-                  src={services[active].image}
-                  alt={services[active].title}
+                  src={services[active]?.image}
+                  alt={services[active]?.title}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />

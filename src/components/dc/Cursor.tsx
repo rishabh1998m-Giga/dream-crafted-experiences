@@ -34,7 +34,7 @@ export function Cursor() {
       ) as HTMLElement | null;
       if (el) {
         setActive(true);
-        setLabel(el.dataset?.cursor && el.dataset.cursor !== "true" ? el.dataset.cursor : "");
+        setLabel(el.dataset?.['cursor'] && el.dataset['cursor'] !== "true" ? el.dataset['cursor']! : "");
       } else {
         setActive(false);
         setLabel("");
