@@ -20,7 +20,7 @@ function Card({ project, i }: { project: Project; i: number }) {
           height={1760}
           className="h-[52vh] w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.06] lg:h-[58vh]"
         />
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,oklch(0.16_0.011_62/0.75),transparent_50%)] opacity-70 transition-opacity duration-700 group-hover:opacity-40" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,oklch(0.17_0.075_310/0.75),transparent_50%)] opacity-70 transition-opacity duration-700 group-hover:opacity-40" />
         <span className="absolute left-5 top-5 font-sans text-[10px] uppercase tracking-[0.3em] text-bone/70">
           {project.index}
         </span>
@@ -32,9 +32,6 @@ function Card({ project, i }: { project: Project; i: number }) {
       <div className="mt-6 flex items-start justify-between gap-6 border-t border-border pt-5">
         <div>
           <h3 className="display text-3xl text-bone md:text-4xl">{project.name}</h3>
-          <p className="mt-3 max-w-xs font-sans text-[13px] leading-relaxed text-muted-foreground">
-            {project.description}
-          </p>
         </div>
         <div className="shrink-0 text-right">
           <p className="font-sans text-[10px] uppercase tracking-[0.26em] text-bone/60">

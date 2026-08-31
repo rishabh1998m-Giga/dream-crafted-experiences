@@ -61,7 +61,7 @@ export function Nav() {
   return (
     <>
       <header
-        className="fixed inset-x-0 top-0 z-50 transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]"
+        className="fixed inset-x-0 top-0 z-50 border-b border-brass/15 bg-ink/95 backdrop-blur-md transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]"
         style={{ paddingTop: scrolled ? 12 : 28, paddingBottom: scrolled ? 12 : 28 }}
       >
         <div
@@ -70,16 +70,6 @@ export function Nav() {
             maxWidth: scrolled ? 1180 : 1600,
           }}
         >
-          <div
-            className="pointer-events-none absolute inset-x-0 top-0 -z-10 transition-opacity duration-700"
-            style={{
-              opacity: scrolled ? 1 : 0,
-              height: 88,
-              background:
-                "linear-gradient(to bottom, oklch(0.17 0.075 310 / 0.88), oklch(0.17 0.075 310 / 0))",
-              backdropFilter: scrolled ? "blur(10px)" : "none",
-            }}
-          />
           <Wordmark compact={scrolled} />
 
           <nav className="hidden items-center gap-9 lg:flex">

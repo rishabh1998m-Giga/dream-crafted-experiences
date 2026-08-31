@@ -52,7 +52,7 @@ export function Hero() {
         )}
       </motion.div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(to_top,oklch(0.16_0.011_62/0.92),oklch(0.16_0.011_62/0.34)_45%,oklch(0.16_0.011_62/0.62))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_top,oklch(0.17_0.075_310/0.92),oklch(0.17_0.075_310/0.34)_45%,oklch(0.17_0.075_310/0.62))]" />
 
       <motion.div
         style={{ opacity: fade }}
@@ -64,7 +64,7 @@ export function Hero() {
           transition={{ delay: 0.5, duration: 1.2 }}
           className="eyebrow mb-8"
         >
-          Bangalore · Experiential Events Since 2020
+          Bangalore
         </motion.p>
 
         <h1 className="display text-[13.5vw] leading-[0.86] text-bone sm:text-[11vw] lg:text-[8.6vw]">
@@ -76,31 +76,13 @@ export function Hero() {
           />
         </h1>
 
-        <div className="mt-10 flex flex-col gap-8 border-t border-bone/15 pt-8 md:flex-row md:items-end md:justify-between">
-          <motion.p
-            initial={reduce ? false : { opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.85, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-md font-sans text-sm leading-relaxed text-bone/70"
-          >
-            Dream Corner creates unforgettable weddings, celebrations and experiences that turn
-            moments into memories.
-          </motion.p>
-
+        <div className="mt-10 flex items-center gap-8 border-t border-bone/15 pt-8">
           <motion.div
             initial={reduce ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-wrap items-center gap-4"
+            transition={{ delay: 0.9, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
           >
-            <LineButton href="#work">Explore Our Work</LineButton>
-            <a
-              href="#contact"
-              data-cursor="true"
-              className="link-underline font-sans text-[11px] uppercase tracking-[0.28em] text-bone/80"
-            >
-              Plan Your Event
-            </a>
+            <LineButton href="#work">Selected Work</LineButton>
           </motion.div>
         </div>
       </motion.div>

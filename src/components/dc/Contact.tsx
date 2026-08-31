@@ -50,11 +50,7 @@ export function Contact() {
             <MaskLines lines={["Let's begin", "the evening."]} />
           </h2>
           <Reveal delay={0.12}>
-            <p className="mt-10 max-w-md font-sans text-[15px] leading-[1.9] text-muted-foreground">
-              We accept a limited number of commissions each season. Share a few details and a
-              principal planner will reply within two working days.
-            </p>
-            <div className="mt-12 space-y-3 font-sans text-sm">
+            <div className="mt-10 space-y-3 font-sans text-sm">
               <p>
                 <a href="mailto:hello@dreamcorner.in" data-cursor="MAIL" className="link-underline">
                   hello@dreamcorner.in
@@ -65,9 +61,7 @@ export function Contact() {
                   +91 80 4123 4567
                 </a>
               </p>
-              <p className="text-muted-foreground">
-                12/1 Ulsoor Road, Indiranagar, Bangalore 560008
-              </p>
+              <p className="text-muted-foreground">Indiranagar, Bangalore</p>
             </div>
           </Reveal>
         </div>
@@ -102,7 +96,7 @@ export function Contact() {
         <div className="mx-auto flex max-w-[1600px] flex-col gap-6 px-6 py-10 font-sans text-[10px] uppercase tracking-[0.28em] text-muted-foreground md:flex-row md:items-center md:justify-between md:px-10">
           <span className="flex items-center gap-3 normal-case tracking-[0.28em]">
             <img src={logo.url} alt="Dream Corner logo" className="h-8 w-8" />
-            Dream Corner — Luxury Event Planning, Bangalore
+            Dream Corner, Bangalore
           </span>
           <div className="flex gap-8">
             <a href="https://instagram.com" target="_blank" rel="noreferrer" data-cursor="true" className="link-underline">
