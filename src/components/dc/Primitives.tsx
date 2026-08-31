@@ -38,11 +38,13 @@ export function MaskLines({
   className,
   lineClassName,
   delay = 0,
+  immediate = false,
 }: {
   lines: string[];
   className?: string;
   lineClassName?: string;
   delay?: number;
+  immediate?: boolean;
 }) {
   const reduce = useReducedMotion();
   return (
@@ -52,8 +54,9 @@ export function MaskLines({
           <motion.span
             className={cn("block", lineClassName)}
             initial={reduce ? false : { y: "110%" }}
-            whileInView={{ y: "0%" }}
-            viewport={{ once: true, margin: "-10% 0px" }}
+            {...(immediate
+              ? { animate: { y: "0%" } }
+              : { whileInView: { y: "0%" }, viewport: { once: true, margin: "-10% 0px" } })}
             transition={{ duration: 1.15, delay: delay + i * 0.09, ease: [0.16, 1, 0.3, 1] }}
           >
             {line}
