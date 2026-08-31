@@ -1,22 +1,22 @@
 import { CountUp, MaskLines, Reveal } from "./Primitives";
 
 const stats = [
-  { to: 240, suffix: "+", label: "Celebrations produced" },
+  { to: 240, suffix: "+", label: "Celebrations" },
   { to: 13, suffix: " yrs", label: "In practice" },
-  { to: 19, suffix: "", label: "Cities & destinations" },
-  { to: 96, suffix: "%", label: "Clients by referral" },
+  { to: 19, suffix: "", label: "Cities" },
+  { to: 96, suffix: "%", label: "By referral" },
 ];
 
 const quotes = [
   {
-    q: "They took a 700-guest wedding across three days in Coorg and made it feel like a private dinner. We were guests at our own celebration.",
+    q: "A 700-guest wedding that felt like a private dinner.",
     a: "Anaya & Rohan M.",
-    m: "Three-day wedding, Coorg",
+    m: "Coorg",
   },
   {
-    q: "The restraint is the thing. Nothing shouted, and yet every photograph looks staged by a film unit.",
+    q: "Nothing shouted, and every frame looked staged by a film unit.",
     a: "Priya Nair",
-    m: "Brand launch, UB City",
+    m: "UB City",
   },
 ];
 

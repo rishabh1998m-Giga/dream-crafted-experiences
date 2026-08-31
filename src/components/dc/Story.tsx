@@ -17,7 +17,7 @@ export function Story() {
         <div className="animate-marquee flex w-max whitespace-nowrap will-change-transform">
           {Array.from({ length: 2 }).map((_, k) => (
             <span key={k} className="flex">
-              {["Creating infinite memories", "Design", "Production", "Emotion", "Precision"].map(
+              {["Creating infinite memories"].map(
                 (t) => (
                   <span
                     key={t + k}
@@ -43,21 +43,12 @@ export function Story() {
               <MaskLines lines={["memories."]} lineClassName="italic text-brass" delay={0.12} />
             </h2>
 
-            <div className="mt-14 grid gap-10 sm:grid-cols-2">
-              <Reveal delay={0.05}>
-                <p className="max-w-sm font-sans text-sm leading-[1.9] text-muted-foreground">
-                  We began in Bangalore in 2020 with a single conviction: an event is not a
-                  schedule, it is a feeling that outlives the night. Everything we build serves
-                  that.
-                </p>
-              </Reveal>
-              <Reveal delay={0.12}>
-                <p className="max-w-sm font-sans text-sm leading-[1.9] text-muted-foreground">
-                  From intimate weddings to large-scale productions, we hold creative direction,
-                  planning, design and execution under one roof — so nothing is lost in translation.
-                </p>
-              </Reveal>
-            </div>
+            <Reveal delay={0.08}>
+              <p className="mt-12 max-w-md font-sans text-sm leading-[1.9] text-muted-foreground">
+                A Bangalore studio for weddings, celebrations and brand evenings — designed and
+                produced under one roof.
+              </p>
+            </Reveal>
 
             <div className="mt-16 hidden lg:block">
               <motion.div style={{ y: yA }} className="relative w-[78%]">
@@ -69,9 +60,6 @@ export function Story() {
                   height={1504}
                   className="h-[46vh] w-full object-cover"
                 />
-                <span className="mt-4 block font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                  Detail · Table design
-                </span>
               </motion.div>
             </div>
           </div>
@@ -86,16 +74,8 @@ export function Story() {
                 height={1600}
                 className="h-[70vh] w-full object-cover lg:h-[86vh]"
               />
-              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,oklch(0.16_0.011_62/0.5),transparent_55%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,oklch(0.17_0.075_310/0.5),transparent_55%)]" />
             </motion.div>
-            <Reveal className="mt-8">
-              <p className="display text-2xl leading-snug text-bone/90 md:text-3xl">
-                “We don't hand you a plan. We hand you the evening you imagined — only sharper.”
-              </p>
-              <p className="mt-5 font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                Dream Corner · Studio note
-              </p>
-            </Reveal>
           </div>
         </div>
       </div>
