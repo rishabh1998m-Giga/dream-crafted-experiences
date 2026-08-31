@@ -1,3 +1,4 @@
+import logo from "@/assets/dream-corner-logo.png.asset.json";
 import { useState } from "react";
 import { LineButton, MaskLines, Reveal } from "./Primitives";
 
@@ -99,7 +100,10 @@ export function Contact() {
 
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-6 px-6 py-10 font-sans text-[10px] uppercase tracking-[0.28em] text-muted-foreground md:flex-row md:items-center md:justify-between md:px-10">
-          <span>Dream Corner — Luxury Event Planning, Bangalore</span>
+          <span className="flex items-center gap-3 normal-case tracking-[0.28em]">
+            <img src={logo.url} alt="Dream Corner logo" className="h-8 w-8" />
+            Dream Corner — Luxury Event Planning, Bangalore
+          </span>
           <div className="flex gap-8">
             <a href="https://instagram.com" target="_blank" rel="noreferrer" data-cursor="true" className="link-underline">
               Instagram

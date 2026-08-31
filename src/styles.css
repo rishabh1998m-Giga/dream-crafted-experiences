@@ -52,13 +52,13 @@
 :root {
   --radius: 2px;
 
-  --ink: oklch(0.16 0.011 62);
-  --ink-soft: oklch(0.221 0.013 62);
-  --bone: oklch(0.945 0.011 85);
-  --bone-dim: oklch(0.86 0.014 82);
-  --brass: oklch(0.782 0.104 79);
-  --brass-deep: oklch(0.63 0.09 70);
-  --ember: oklch(0.36 0.086 32);
+  --ink: oklch(0.17 0.075 310);
+  --ink-soft: oklch(0.235 0.082 308);
+  --bone: oklch(0.955 0.014 92);
+  --bone-dim: oklch(0.87 0.018 88);
+  --brass: oklch(0.826 0.142 86);
+  --brass-deep: oklch(0.66 0.125 72);
+  --ember: oklch(0.4 0.13 330);
 
   --background: var(--ink);
   --foreground: var(--bone);
@@ -67,13 +67,13 @@
   --popover: var(--ink-soft);
   --popover-foreground: var(--bone);
   --primary: var(--brass);
-  --primary-foreground: oklch(0.16 0.011 62);
-  --secondary: oklch(0.26 0.014 62);
+  --primary-foreground: oklch(0.17 0.075 310);
+  --secondary: oklch(0.27 0.075 308);
   --secondary-foreground: var(--bone);
-  --muted: oklch(0.26 0.014 62);
-  --muted-foreground: oklch(0.68 0.016 78);
+  --muted: oklch(0.27 0.075 308);
+  --muted-foreground: oklch(0.72 0.03 90);
   --accent: var(--brass);
-  --accent-foreground: oklch(0.16 0.011 62);
+  --accent-foreground: oklch(0.17 0.075 310);
   --destructive: oklch(0.55 0.19 27);
   --destructive-foreground: var(--bone);
   --border: oklch(1 0 0 / 12%);
@@ -85,12 +85,12 @@
 .on-bone {
   --background: var(--bone);
   --foreground: var(--ink);
-  --card: oklch(0.975 0.008 85);
+  --card: oklch(0.98 0.01 92);
   --card-foreground: var(--ink);
-  --muted-foreground: oklch(0.44 0.016 62);
-  --border: oklch(0.16 0.011 62 / 16%);
-  --input: oklch(0.16 0.011 62 / 22%);
-  --secondary: oklch(0.9 0.012 84);
+  --muted-foreground: oklch(0.42 0.04 308);
+  --border: oklch(0.17 0.075 310 / 16%);
+  --input: oklch(0.17 0.075 310 / 22%);
+  --secondary: oklch(0.91 0.016 90);
   --secondary-foreground: var(--ink);
   background-color: var(--background);
   color: var(--foreground);
