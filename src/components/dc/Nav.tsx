@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Magnetic } from "./Primitives";
+import logo from "@/assets/dream-corner-logo.png.asset.json";
 
 const links = [
   { label: "About", href: "#about" },
@@ -12,7 +13,13 @@ const links = [
 
 function Wordmark({ compact = false }: { compact?: boolean }) {
   return (
-    <a href="#top" data-cursor="TOP" className="flex items-baseline gap-3">
+    <a href="#top" data-cursor="TOP" className="flex items-center gap-3">
+      <img
+        src={logo.url}
+        alt="Dream Corner logo"
+        className="transition-all duration-700"
+        style={{ width: compact ? 34 : 46, height: compact ? 34 : 46 }}
+      />
       <span
         className="display text-foreground transition-all duration-700"
         style={{ fontSize: compact ? "1.15rem" : "1.5rem", letterSpacing: "0.02em" }}
@@ -69,7 +76,7 @@ export function Nav() {
               opacity: scrolled ? 1 : 0,
               height: 88,
               background:
-                "linear-gradient(to bottom, oklch(0.16 0.011 62 / 0.86), oklch(0.16 0.011 62 / 0))",
+                "linear-gradient(to bottom, oklch(0.17 0.075 310 / 0.88), oklch(0.17 0.075 310 / 0))",
               backdropFilter: scrolled ? "blur(10px)" : "none",
             }}
           />
