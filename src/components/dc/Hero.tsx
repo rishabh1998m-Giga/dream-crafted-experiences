@@ -52,7 +52,7 @@ export function Hero() {
         )}
       </motion.div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(to_top,oklch(0.17_0.075_310/0.92),oklch(0.17_0.075_310/0.34)_45%,oklch(0.17_0.075_310/0.62))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_top,oklch(0.96_0.012_85/0.88),oklch(0.96_0.012_85/0.25)_45%,oklch(0.96_0.012_85/0.45))]" />
 
       <motion.div
         style={{ opacity: fade }}
@@ -67,7 +67,7 @@ export function Hero() {
           Bangalore
         </motion.p>
 
-        <h1 className="display text-[13.5vw] leading-[0.86] text-bone sm:text-[11vw] lg:text-[8.6vw]">
+        <h1 className="display text-[13.5vw] leading-[0.86] text-ink sm:text-[11vw] lg:text-[8.6vw]">
           <MaskLines
             lines={["Dreams,", "crafted into", "experiences."]}
             delay={0.15}
@@ -76,7 +76,7 @@ export function Hero() {
           />
         </h1>
 
-        <div className="mt-10 flex items-center gap-8 border-t border-bone/15 pt-8">
+        <div className="mt-10 flex items-center gap-8 border-t border-ink/15 pt-8">
           <motion.div
             initial={reduce ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
