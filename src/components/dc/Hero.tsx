@@ -91,8 +91,8 @@ export function Hero() {
         style={{ opacity: fade }}
         className="pointer-events-none absolute bottom-8 right-6 z-10 hidden items-center gap-3 md:right-10 md:flex"
       >
-        <span className="font-sans text-[9px] uppercase tracking-[0.3em] text-bone/45">Scroll</span>
-        <span className="block h-10 w-px overflow-hidden bg-bone/20">
+        <span className="font-sans text-[9px] uppercase tracking-[0.3em] text-ink/45">Scroll</span>
+        <span className="block h-10 w-px overflow-hidden bg-ink/20">
           <motion.span
             className="block h-4 w-px bg-brass"
             animate={{ y: [-16, 40] }}
