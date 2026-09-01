@@ -17,7 +17,7 @@ function Wordmark({ compact = false }: { compact?: boolean }) {
       <img
         src={logo.url}
         alt="Dream Corner logo"
-        className="transition-all duration-700"
+        className="rounded-full transition-all duration-700"
         style={{ width: compact ? 34 : 46, height: compact ? 34 : 46 }}
       />
       <span
@@ -60,7 +60,63 @@ export function Nav() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-...
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  return (
+    <>
+      <header
+        className="fixed inset-x-0 top-0 z-50 border-b border-brass/15 bg-ink/95 backdrop-blur-md transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]"
+        style={{
+          paddingTop: scrolled ? 12 : 28,
+          paddingBottom: scrolled ? 12 : 28,
+          transform: hidden && !open ? "translateY(-100%)" : "translateY(0)",
+        }}
+      >
+        <div
+          className="mx-auto flex items-center justify-between px-6 transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)] md:px-10"
+          style={{
+            maxWidth: scrolled ? 1180 : 1600,
+          }}
+        >
+          <Wordmark compact={scrolled} />
+
+          <nav className="hidden items-center gap-9 lg:flex">
+            {links.map((l) => (
+              <Magnetic key={l.href} strength={0.18}>
+                <a
+                  href={l.href}
+                  data-cursor="true"
+                  className="link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] text-foreground/70 transition-colors duration-300 hover:text-foreground"
+                >
+                  {l.label}
+                </a>
+              </Magnetic>
+            ))}
+            <a
+              href="#contact"
+              data-cursor="ENQUIRE"
+              className="border border-brass/50 px-5 py-2.5 font-sans text-[10.5px] uppercase tracking-[0.26em] text-brass transition-colors duration-500 hover:bg-brass hover:text-primary-foreground"
+            >
+              Plan Your Event
+            </a>
+          </nav>
+
+          <button
+            onClick={() => setOpen(true)}
+            data-cursor="MENU"
+            aria-label="Open menu"
+            className="flex flex-col items-end gap-[6px] lg:hidden"
+          >
+            <span className="block h-px w-8 bg-foreground" />
+            <span className="block h-px w-5 bg-foreground" />
+          </button>
+        </div>
       </header>
 
       {/* scroll progress hairline */}
@@ -69,7 +125,6 @@ export function Nav() {
         className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-brass"
         style={{ scaleX: progress }}
       />
-
 
       <AnimatePresence>
         {open && (
