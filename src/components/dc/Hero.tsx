@@ -24,7 +24,7 @@ export function Hero() {
     <section
       id="top"
       ref={ref}
-      className="vignette relative h-[100svh] w-full overflow-hidden bg-ink"
+      className="relative h-[100svh] w-full overflow-hidden bg-bone"
     >
       <motion.div className="absolute inset-0" style={{ y, scale }}>
         <img
