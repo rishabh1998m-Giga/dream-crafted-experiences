@@ -52,8 +52,8 @@
 :root {
   --radius: 2px;
 
-  --ink: oklch(0.17 0.075 310);
-  --ink-soft: oklch(0.235 0.082 308);
+  --ink: oklch(0.251 0.128 308);
+  --ink-soft: oklch(0.30 0.125 307);
   --bone: oklch(0.955 0.014 92);
   --bone-dim: oklch(0.87 0.018 88);
   --brass: oklch(0.826 0.142 86);
@@ -67,13 +67,13 @@
   --popover: var(--ink-soft);
   --popover-foreground: var(--bone);
   --primary: var(--brass);
-  --primary-foreground: oklch(0.17 0.075 310);
-  --secondary: oklch(0.27 0.075 308);
+  --primary-foreground: var(--ink);
+  --secondary: oklch(0.33 0.12 307);
   --secondary-foreground: var(--bone);
-  --muted: oklch(0.27 0.075 308);
+  --muted: oklch(0.33 0.12 307);
   --muted-foreground: oklch(0.72 0.03 90);
   --accent: var(--brass);
-  --accent-foreground: oklch(0.17 0.075 310);
+  --accent-foreground: var(--ink);
   --destructive: oklch(0.55 0.19 27);
   --destructive-foreground: var(--bone);
   --border: oklch(1 0 0 / 12%);

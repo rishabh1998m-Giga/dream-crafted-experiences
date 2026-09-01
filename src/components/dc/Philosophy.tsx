@@ -19,7 +19,7 @@ export function Philosophy() {
           <Reveal>
             <p className="eyebrow">Why Dream Corner</p>
           </Reveal>
-          <h2 className="display mt-8 text-[12vw] leading-[0.9] md:text-[6vw]">
+          <h2 className="display mt-8 text-[9.5vw] leading-[0.9] md:text-[4.6vw]">
             <MaskLines lines={["An evening", "should feel", "inevitable."]} />
           </h2>
 

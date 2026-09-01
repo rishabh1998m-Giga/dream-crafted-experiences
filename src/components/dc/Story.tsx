@@ -38,7 +38,7 @@ export function Story() {
             <Reveal>
               <p className="eyebrow mb-10">01 — Who we are</p>
             </Reveal>
-            <h2 className="display text-[12vw] leading-[0.9] text-bone sm:text-[8vw] lg:text-[5.6vw]">
+            <h2 className="display text-[9.5vw] leading-[0.9] text-bone sm:text-[6.2vw] lg:text-[4.2vw]">
               <MaskLines lines={["Creating", "infinite"]} />
               <MaskLines lines={["memories."]} lineClassName="italic text-brass" delay={0.12} />
             </h2>
