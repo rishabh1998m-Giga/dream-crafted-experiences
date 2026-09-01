@@ -41,7 +41,7 @@ export function Proof() {
           {quotes.map((c, i) => (
             <Reveal key={c.a} delay={i * 0.1}>
               <blockquote>
-                <p className="display text-3xl leading-[1.25] md:text-[2.6rem]">
+                <p className="display text-3xl leading-[1.25] md:text-[2.1rem]">
                   <MaskLines lines={[`“${c.q}”`]} lineClassName="block" />
                 </p>
                 <footer className="mt-8 flex items-center gap-4">

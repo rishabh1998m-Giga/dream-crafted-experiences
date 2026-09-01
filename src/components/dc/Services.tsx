@@ -42,7 +42,7 @@ export function Services() {
     <section id="services" className="relative overflow-hidden bg-ink py-28 md:py-40">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <h2 className="display text-[13vw] leading-[0.88] md:text-[7vw]">
+          <h2 className="display text-[10vw] leading-[0.88] md:text-[5.4vw]">
             <MaskLines lines={["What we", "compose"]} />
           </h2>
           <Reveal delay={0.1}>
