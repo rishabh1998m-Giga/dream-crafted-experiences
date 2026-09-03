@@ -21,14 +21,14 @@ function Wordmark({ compact = false }: { compact?: boolean }) {
         style={{ width: compact ? 34 : 46, height: compact ? 34 : 46 }}
       />
       <span
-        className="display text-foreground transition-all duration-700"
+        className="display text-ink transition-all duration-700"
         style={{ fontSize: compact ? "1.15rem" : "1.5rem", letterSpacing: "0.02em" }}
       >
         Dream
       </span>
       <span className="h-[6px] w-[6px] translate-y-[-3px] rotate-45 bg-brass" />
       <span
-        className="font-sans uppercase text-foreground/80 transition-all duration-700"
+        className="font-sans uppercase text-ink/80 transition-all duration-700"
         style={{
           fontSize: compact ? "0.6rem" : "0.68rem",
           letterSpacing: "0.4em",
@@ -71,7 +71,7 @@ export function Nav() {
   return (
     <>
       <header
-        className="fixed inset-x-0 top-0 z-50 border-b border-brass/15 bg-ink/95 backdrop-blur-md transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]"
+        className="fixed inset-x-0 top-0 z-50 border-b border-ink/8 bg-bone/95 backdrop-blur-md transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]"
         style={{
           paddingTop: scrolled ? 12 : 28,
           paddingBottom: scrolled ? 12 : 28,
@@ -92,7 +92,7 @@ export function Nav() {
                 <a
                   href={l.href}
                   data-cursor="true"
-                  className="link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] text-foreground/70 transition-colors duration-300 hover:text-foreground"
+                  className="link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] text-ink/70 transition-colors duration-300 hover:text-ink"
                 >
                   {l.label}
                 </a>
@@ -113,8 +113,8 @@ export function Nav() {
             aria-label="Open menu"
             className="flex flex-col items-end gap-[6px] lg:hidden"
           >
-            <span className="block h-px w-8 bg-foreground" />
-            <span className="block h-px w-5 bg-foreground" />
+            <span className="block h-px w-8 bg-ink" />
+            <span className="block h-px w-5 bg-ink" />
           </button>
         </div>
       </header>
@@ -129,7 +129,7 @@ export function Nav() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[65] bg-ink paper-texture lg:hidden"
+            className="fixed inset-0 z-[65] bg-bone paper-texture lg:hidden"
             initial={{ clipPath: "inset(0 0 100% 0)" }}
             animate={{ clipPath: "inset(0 0 0% 0)" }}
             exit={{ clipPath: "inset(0 0 100% 0)" }}
@@ -155,13 +155,13 @@ export function Nav() {
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.18 + i * 0.06, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                    className="display text-[11vw] leading-[1.05] text-foreground"
+                    className="display text-[11vw] leading-[1.05] text-ink"
                   >
                     {l.label}
                   </motion.a>
                 ))}
               </nav>
-              <p className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+              <p className="font-sans text-[10px] uppercase tracking-[0.3em] text-ink/55">
                 Bangalore · Est. 2020
               </p>
             </div>
