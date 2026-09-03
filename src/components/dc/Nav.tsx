@@ -14,29 +14,13 @@ const links = [
 
 function Wordmark({ compact = false }: { compact?: boolean }) {
   return (
-    <a href="#top" data-cursor="TOP" className="flex items-center gap-3">
+    <a href="#top" data-cursor="TOP" aria-label="Dream Corner" className="block">
       <img
         src={logo.url}
         alt="Dream Corner logo"
-        className="rounded-full transition-all duration-700"
-        style={{ width: compact ? 34 : 46, height: compact ? 34 : 46 }}
+        className="rounded-full shadow-[0_2px_10px_rgba(51,0,79,0.12)] ring-1 ring-ink/10 transition-all duration-700"
+        style={{ width: compact ? 40 : 54, height: compact ? 40 : 54 }}
       />
-      <span
-        className="display text-ink transition-all duration-700"
-        style={{ fontSize: compact ? "1.15rem" : "1.5rem", letterSpacing: "0.02em" }}
-      >
-        Dream
-      </span>
-      <span className="h-[6px] w-[6px] translate-y-[-3px] rotate-45 bg-brass" />
-      <span
-        className="font-sans uppercase text-ink/80 transition-all duration-700"
-        style={{
-          fontSize: compact ? "0.6rem" : "0.68rem",
-          letterSpacing: "0.4em",
-        }}
-      >
-        Corner
-      </span>
     </a>
   );
 }
