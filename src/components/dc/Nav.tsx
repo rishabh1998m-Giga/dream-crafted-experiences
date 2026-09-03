@@ -129,7 +129,7 @@ export function Nav() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[65] bg-ink paper-texture lg:hidden"
+            className="fixed inset-0 z-[65] bg-bone paper-texture lg:hidden"
             initial={{ clipPath: "inset(0 0 100% 0)" }}
             animate={{ clipPath: "inset(0 0 0% 0)" }}
             exit={{ clipPath: "inset(0 0 100% 0)" }}
@@ -155,13 +155,13 @@ export function Nav() {
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.18 + i * 0.06, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                    className="display text-[11vw] leading-[1.05] text-foreground"
+                    className="display text-[11vw] leading-[1.05] text-ink"
                   >
                     {l.label}
                   </motion.a>
                 ))}
               </nav>
-              <p className="font-sans text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+              <p className="font-sans text-[10px] uppercase tracking-[0.3em] text-ink/55">
                 Bangalore · Est. 2020
               </p>
             </div>
