@@ -79,8 +79,8 @@ export function Nav() {
             : "border-b border-transparent bg-transparent backdrop-blur-none"
         )}
         style={{
-          paddingTop: scrolled ? 12 : 28,
-          paddingBottom: scrolled ? 12 : 28,
+          paddingTop: scrolled ? 12 : 20,
+          paddingBottom: scrolled ? 12 : 20,
           transform: hidden && !open ? "translateY(-100%)" : "translateY(0)",
         }}
       >
