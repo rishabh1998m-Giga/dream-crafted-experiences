@@ -98,7 +98,7 @@ export function Nav() {
                 <a
                   href={l.href}
                   data-cursor="true"
-                  className="link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] text-ink/70 transition-colors duration-300 hover:text-ink"
+                  className="link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] text-ink transition-colors duration-300 hover:text-ink/70"
                 >
                   {l.label}
                 </a>
@@ -107,7 +107,7 @@ export function Nav() {
             <a
               href="#contact"
               data-cursor="ENQUIRE"
-              className="border border-brass/50 px-5 py-2.5 font-sans text-[10.5px] uppercase tracking-[0.26em] text-brass transition-colors duration-500 hover:bg-brass hover:text-primary-foreground"
+              className="border border-brass bg-bone/25 px-5 py-2.5 font-sans text-[10.5px] uppercase tracking-[0.26em] text-brass transition-colors duration-500 hover:bg-brass hover:text-primary-foreground"
             >
               Plan Your Event
             </a>
