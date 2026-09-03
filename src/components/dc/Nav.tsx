@@ -21,14 +21,14 @@ function Wordmark({ compact = false }: { compact?: boolean }) {
         style={{ width: compact ? 34 : 46, height: compact ? 34 : 46 }}
       />
       <span
-        className="display text-foreground transition-all duration-700"
+        className="display text-ink transition-all duration-700"
         style={{ fontSize: compact ? "1.15rem" : "1.5rem", letterSpacing: "0.02em" }}
       >
         Dream
       </span>
       <span className="h-[6px] w-[6px] translate-y-[-3px] rotate-45 bg-brass" />
       <span
-        className="font-sans uppercase text-foreground/80 transition-all duration-700"
+        className="font-sans uppercase text-ink/80 transition-all duration-700"
         style={{
           fontSize: compact ? "0.6rem" : "0.68rem",
           letterSpacing: "0.4em",
