@@ -72,7 +72,12 @@ export function Nav() {
   return (
     <>
       <header
-        className="fixed inset-x-0 top-0 z-50 border-b border-ink/8 bg-bone/95 backdrop-blur-md transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]"
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]",
+          scrolled
+            ? "border-b border-ink/8 bg-bone/95 backdrop-blur-md"
+            : "border-b border-transparent bg-transparent backdrop-blur-none"
+        )}
         style={{
           paddingTop: scrolled ? 12 : 28,
           paddingBottom: scrolled ? 12 : 28,
