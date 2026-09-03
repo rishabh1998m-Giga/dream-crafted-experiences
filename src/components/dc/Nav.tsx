@@ -71,7 +71,7 @@ export function Nav() {
   return (
     <>
       <header
-        className="fixed inset-x-0 top-0 z-50 border-b border-brass/15 bg-ink/95 backdrop-blur-md transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]"
+        className="fixed inset-x-0 top-0 z-50 border-b border-ink/8 bg-bone/95 backdrop-blur-md transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]"
         style={{
           paddingTop: scrolled ? 12 : 28,
           paddingBottom: scrolled ? 12 : 28,
@@ -92,7 +92,7 @@ export function Nav() {
                 <a
                   href={l.href}
                   data-cursor="true"
-                  className="link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] text-foreground/70 transition-colors duration-300 hover:text-foreground"
+                  className="link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] text-ink/70 transition-colors duration-300 hover:text-ink"
                 >
                   {l.label}
                 </a>
@@ -113,8 +113,8 @@ export function Nav() {
             aria-label="Open menu"
             className="flex flex-col items-end gap-[6px] lg:hidden"
           >
-            <span className="block h-px w-8 bg-foreground" />
-            <span className="block h-px w-5 bg-foreground" />
+            <span className="block h-px w-8 bg-ink" />
+            <span className="block h-px w-5 bg-ink" />
           </button>
         </div>
       </header>
