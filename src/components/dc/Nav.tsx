@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring } from "motion/react";
+import { cn } from "@/lib/utils";
 import { Magnetic } from "./Primitives";
 import logo from "@/assets/dream-corner-logo.png.asset.json";
 
@@ -71,10 +72,15 @@ export function Nav() {
   return (
     <>
       <header
-        className="fixed inset-x-0 top-0 z-50 border-b border-ink/8 bg-bone/95 backdrop-blur-md transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]"
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]",
+          scrolled
+            ? "border-b border-ink/8 bg-bone/95 backdrop-blur-md"
+            : "border-b border-transparent bg-transparent backdrop-blur-none"
+        )}
         style={{
-          paddingTop: scrolled ? 12 : 28,
-          paddingBottom: scrolled ? 12 : 28,
+          paddingTop: scrolled ? 12 : 20,
+          paddingBottom: scrolled ? 12 : 20,
           transform: hidden && !open ? "translateY(-100%)" : "translateY(0)",
         }}
       >
@@ -92,7 +98,7 @@ export function Nav() {
                 <a
                   href={l.href}
                   data-cursor="true"
-                  className="link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] text-ink/70 transition-colors duration-300 hover:text-ink"
+                  className="link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] text-ink transition-colors duration-300 hover:text-ink/70"
                 >
                   {l.label}
                 </a>
@@ -101,7 +107,7 @@ export function Nav() {
             <a
               href="#contact"
               data-cursor="ENQUIRE"
-              className="border border-brass/50 px-5 py-2.5 font-sans text-[10.5px] uppercase tracking-[0.26em] text-brass transition-colors duration-500 hover:bg-brass hover:text-primary-foreground"
+              className="border border-brass bg-bone/25 px-5 py-2.5 font-sans text-[10.5px] uppercase tracking-[0.26em] text-brass transition-colors duration-500 hover:bg-brass hover:text-primary-foreground"
             >
               Plan Your Event
             </a>
