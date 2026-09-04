@@ -2,10 +2,9 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { MaskLines, Reveal } from "./Primitives";
 import work1 from "@/assets/work-1.jpg";
-import work3 from "@/assets/work-3.jpg";
+import work2 from "@/assets/work-2.jpg";
 import work5 from "@/assets/work-5.jpg";
 import story1 from "@/assets/story-1.jpg";
-import grid1 from "@/assets/grid-1.jpg";
 
 const services = [
   {
