@@ -82,7 +82,11 @@ export function Nav() {
                 <a
                   href={l.href}
                   data-cursor="true"
-                  className="link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] text-ink transition-colors duration-300 hover:text-ink/70"
+                  className={cn(
+                    "link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] transition-colors duration-300",
+                    scrolled ? "text-ink hover:text-ink/70" : "text-bone hover:text-bone/70"
+                  )}
+
                 >
                   {l.label}
                 </a>
@@ -103,8 +107,9 @@ export function Nav() {
             aria-label="Open menu"
             className="flex flex-col items-end gap-[6px] lg:hidden"
           >
-            <span className="block h-px w-8 bg-ink" />
-            <span className="block h-px w-5 bg-ink" />
+            <span className={cn("block h-px w-8", scrolled ? "bg-ink" : "bg-bone")} />
+            <span className={cn("block h-px w-5", scrolled ? "bg-ink" : "bg-bone")} />
+
           </button>
         </div>
       </header>
