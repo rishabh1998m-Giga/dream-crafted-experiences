@@ -10,28 +10,23 @@ import grid1 from "@/assets/grid-1.jpg";
 const services = [
   {
     n: "01",
-    title: "Weddings",
-    image: work1,
-  },
-  {
-    n: "02",
-    title: "Destination Affairs",
-    image: work3,
-  },
-  {
-    n: "03",
-    title: "Brand & Corporate",
+    title: "Themed Birthdays",
     image: work5,
   },
   {
-    n: "04",
-    title: "Intimate Gatherings",
+    n: "02",
+    title: "Traditional Events",
     image: story1,
   },
   {
-    n: "05",
-    title: "Design & Styling",
-    image: grid1,
+    n: "03",
+    title: "Wedding Events",
+    image: work1,
+  },
+  {
+    n: "04",
+    title: "Corporate Events",
+    image: work2,
   },
 ];
 
