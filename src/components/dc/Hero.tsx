@@ -24,12 +24,12 @@ export function Hero() {
     <section
       id="top"
       ref={ref}
-      className="relative h-[100svh] w-full overflow-hidden bg-bone"
+      className="relative h-[100svh] w-full overflow-hidden bg-ink"
     >
       <motion.div className="absolute inset-0" style={{ y, scale }}>
         <img
           src={heroPoster}
-          alt="A candlelit luxury wedding reception designed by Dream Corner"
+          alt="Guests celebrating at a candlelit luxury event designed by Dream Corner"
           width={1920}
           height={1088}
           fetchPriority="high"
@@ -52,7 +52,7 @@ export function Hero() {
         )}
       </motion.div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(to_top,oklch(0.96_0.012_85/0.88),oklch(0.96_0.012_85/0.25)_45%,oklch(0.96_0.012_85/0.45))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_top,oklch(0.16_0.06_308/0.92),oklch(0.16_0.06_308/0.35)_55%,oklch(0.16_0.06_308/0.55))]" />
 
       <motion.div
         style={{ opacity: fade }}
@@ -67,7 +67,7 @@ export function Hero() {
           Bangalore
         </motion.p>
 
-        <h1 className="display text-[10.5vw] leading-[0.86] text-ink sm:text-[8.5vw] lg:text-[6.6vw]">
+        <h1 className="display text-[10.5vw] leading-[0.86] text-bone sm:text-[8.5vw] lg:text-[6.6vw]">
           <MaskLines
             lines={["Dreams,", "crafted into", "experiences."]}
             delay={0.15}
@@ -80,13 +80,14 @@ export function Hero() {
           initial={reduce ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.75, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-8 max-w-md font-sans text-sm leading-[1.8] text-ink/75"
+          className="mt-8 max-w-md font-sans text-sm leading-[1.8] text-bone/80"
         >
           Every great celebration begins with a vision. We turn your ideas into unforgettable
           experiences.
         </motion.p>
 
-        <div className="mt-10 flex items-center gap-8 border-t border-ink/15 pt-8">
+        <div className="mt-10 flex items-center gap-8 border-t border-bone/25 pt-8">
+
           <motion.div
             initial={reduce ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -101,8 +102,9 @@ export function Hero() {
         style={{ opacity: fade }}
         className="pointer-events-none absolute bottom-8 right-6 z-10 hidden items-center gap-3 md:right-10 md:flex"
       >
-        <span className="font-sans text-[9px] uppercase tracking-[0.3em] text-ink/45">Scroll</span>
-        <span className="block h-10 w-px overflow-hidden bg-ink/20">
+        <span className="font-sans text-[9px] uppercase tracking-[0.3em] text-bone/60">Scroll</span>
+        <span className="block h-10 w-px overflow-hidden bg-bone/25">
+
           <motion.span
             className="block h-4 w-px bg-brass"
             animate={{ y: [-16, 40] }}

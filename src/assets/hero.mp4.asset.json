@@ -1,9 +1,11 @@
 {
   "version": 1,
-  "asset_id": "0056bd50-0783-4264-ba09-76f46552e307",
+  "asset_id": "031fae60-bd6e-4e7d-8faa-0583a7c099d6",
   "project_id": "bf434abe-bc71-41a2-bb8d-bc407fb544b3",
-  "url": "/__l5e/assets-v1/0056bd50-0783-4264-ba09-76f46552e307/hero.mp4",
+  "url": "/__l5e/assets-v1/031fae60-bd6e-4e7d-8faa-0583a7c099d6/hero.mp4",
+  "r2_key": "a/v1/bf434abe-bc71-41a2-bb8d-bc407fb544b3/031fae60-bd6e-4e7d-8faa-0583a7c099d6/hero.mp4",
   "original_filename": "hero.mp4",
-  "size": 10540365,
-  "created_at": "2026-08-31T21:16:31Z"
+  "size": 8343171,
+  "content_type": "video/mp4",
+  "created_at": "2026-09-04T17:01:42Z"
 }
