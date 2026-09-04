@@ -45,8 +45,13 @@ export function Story() {
 
             <Reveal delay={0.08}>
               <p className="mt-12 max-w-md font-sans text-sm leading-[1.9] text-muted-foreground">
-                A Bangalore studio for weddings, celebrations and brand evenings — designed and
-                produced under one roof.
+                From weddings to corporate events, birthdays to grand launches. We create moments
+                that leave lasting memories.
+              </p>
+            </Reveal>
+            <Reveal delay={0.14}>
+              <p className="mt-6 font-sans text-[11px] uppercase tracking-[0.26em] text-brass">
+                Your dream event starts here.
               </p>
             </Reveal>
 

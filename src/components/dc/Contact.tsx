@@ -47,9 +47,14 @@ export function Contact() {
             <p className="eyebrow">Enquiries</p>
           </Reveal>
           <h2 className="display mt-8 text-[10vw] leading-[0.88] md:text-[5vw]">
-            <MaskLines lines={["Let's begin", "the evening."]} />
+            <MaskLines lines={["Let's bring", "your event", "to life."]} />
           </h2>
           <Reveal delay={0.12}>
+            <p className="mt-8 max-w-sm font-sans text-sm leading-[1.9] text-muted-foreground">
+              Life is full of reasons to celebrate. Let us make them unforgettable.
+            </p>
+          </Reveal>
+          <Reveal delay={0.16}>
             <div className="mt-10 space-y-3 font-sans text-sm">
               <p>
                 <a href="mailto:hello@dreamcorner.in" data-cursor="MAIL" className="link-underline">

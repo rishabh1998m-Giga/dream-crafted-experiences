@@ -22,6 +22,12 @@ export function Philosophy() {
           <h2 className="display mt-8 text-[9.5vw] leading-[0.9] md:text-[4.6vw]">
             <MaskLines lines={["An evening", "should feel", "inevitable."]} />
           </h2>
+          <Reveal delay={0.1}>
+            <p className="mt-10 max-w-md font-sans text-sm leading-[1.9] text-muted-foreground">
+              From intimate gatherings to grand celebrations, we design events that inspire,
+              impress, and create lasting memories.
+            </p>
+          </Reveal>
 
           <dl className="mt-14 grid gap-x-12 gap-y-10 sm:grid-cols-2">
             {pillars.map((p, i) => (

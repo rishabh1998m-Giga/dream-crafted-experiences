@@ -76,6 +76,16 @@ export function Hero() {
           />
         </h1>
 
+        <motion.p
+          initial={reduce ? false : { opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.75, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-8 max-w-md font-sans text-sm leading-[1.8] text-ink/75"
+        >
+          Every great celebration begins with a vision. We turn your ideas into unforgettable
+          experiences.
+        </motion.p>
+
         <div className="mt-10 flex items-center gap-8 border-t border-ink/15 pt-8">
           <motion.div
             initial={reduce ? false : { opacity: 0, y: 16 }}
