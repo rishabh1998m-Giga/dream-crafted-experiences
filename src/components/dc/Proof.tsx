@@ -24,6 +24,9 @@ export function Proof() {
   return (
     <section className="relative overflow-hidden bg-ink py-28 md:py-36">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10">
+        <Reveal className="mb-12">
+          <p className="eyebrow">Your occasion deserves excellence.</p>
+        </Reveal>
         <div className="grid gap-y-12 border-y border-border py-14 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.06} className="px-2">
