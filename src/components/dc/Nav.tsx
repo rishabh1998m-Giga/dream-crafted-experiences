@@ -92,13 +92,68 @@ export function Nav() {
                 </a>
               </Magnetic>
             ))}
-            <a
-              href="#contact"
-              data-cursor="ENQUIRE"
-              className="border border-brass bg-bone/25 px-5 py-2.5 font-sans text-[10.5px] uppercase tracking-[0.26em] text-brass transition-colors duration-500 hover:bg-brass hover:text-primary-foreground"
-            >
-              Plan Your Event
-            </a>
+            <Magnetic strength={0.16}>
+              <a
+                href="#contact"
+                data-cursor="ENQUIRE"
+                className="group relative inline-flex items-center overflow-hidden px-5 py-2.5 font-sans text-[10.5px] uppercase tracking-[0.26em] transition-all duration-500"
+              >
+                {/* background */}
+                <span
+                  className={cn(
+                    "absolute inset-0 transition-all duration-500",
+                    scrolled
+                      ? "bg-ink/90 shadow-lg group-hover:bg-ink group-hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)]"
+                      : "bg-bone/15 shadow-lg group-hover:bg-bone/25 group-hover:shadow-[0_12px_40px_rgba(211,185,140,0.12)]"
+                  )}
+                />
+                {/* inner border */}
+                <span
+                  className={cn(
+                    "absolute inset-[3px] border transition-all duration-500",
+                    scrolled
+                      ? "border-brass/25 group-hover:border-brass/50"
+                      : "border-brass/30 group-hover:border-brass/55"
+                  )}
+                />
+                {/* corner accents */}
+                <span
+                  className={cn(
+                    "absolute left-0 top-0 h-2 w-2 -translate-x-1 -translate-y-1 border-l border-t transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0",
+                    scrolled ? "border-brass/70" : "border-brass"
+                  )}
+                />
+                <span
+                  className={cn(
+                    "absolute bottom-0 right-0 h-2 w-2 translate-x-1 translate-y-1 border-r border-b transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0",
+                    scrolled ? "border-brass/70" : "border-brass"
+                  )}
+                />
+                {/* text + arrow */}
+                <span className="relative z-10 flex items-center gap-2 text-bone transition-colors duration-300 group-hover:text-brass">
+                  Plan Your Event
+                  <svg
+                    className="h-3.5 w-3.5 transition-all duration-500 group-hover:translate-x-1"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="square"
+                  >
+                    <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+                {/* bottom highlight line */}
+                <span
+                  className={cn(
+                    "absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 transition-all duration-700 group-hover:w-full",
+                    scrolled
+                      ? "bg-gradient-to-r from-transparent via-brass/60 to-transparent"
+                      : "bg-gradient-to-r from-transparent via-brass to-transparent"
+                  )}
+                />
+              </a>
+            </Magnetic>
           </nav>
 
           <button
