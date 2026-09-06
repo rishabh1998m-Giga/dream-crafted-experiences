@@ -44,7 +44,7 @@ export function Philosophy() {
           <div className="sticky top-28 overflow-hidden">
             <img
               src={gallery.enchantedForestNight}
-              alt="Candlelit tablescape styled by Dream Corner in Bangalore"
+              alt="Enchanted forest themed birthday installation by Dream Corner in Bangalore"
               className="h-[520px] w-full object-cover md:h-[720px]"
               loading="lazy"
             />
