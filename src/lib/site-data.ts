@@ -1,15 +1,6 @@
-import work1 from "@/assets/work-1.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work3 from "@/assets/work-3.jpg";
-import work4 from "@/assets/work-4.jpg";
-import work5 from "@/assets/work-5.jpg";
-import work6 from "@/assets/work-6.jpg";
-import story1 from "@/assets/story-1.jpg";
-import story2 from "@/assets/story-2.jpg";
-import grid1 from "@/assets/grid-1.jpg";
-import grid2 from "@/assets/grid-2.jpg";
+import { gallery } from "./gallery";
 
-export const images = { work1, work2, work3, work4, work5, work6, story1, story2, grid1, grid2 };
+export const images = gallery;
 
 export type Project = {
   index: string;
@@ -24,63 +15,57 @@ export type Project = {
 export const projects: Project[] = [
   {
     index: "01",
-    name: "The Marigold Hour",
-    category: "Luxury Wedding",
+    name: "Kiana's Fairy Garden",
+    category: "Themed Birthday",
     location: "Bangalore, IN",
     year: "2025",
-    description:
-      "A thousand hand-set candles, a floral canopy grown over three days, and a ceremony timed to the last minute of dusk.",
-    image: work1,
+    description: "A blush arch garden of roses, butterflies and pastel light.",
+    image: gallery.fairyGardenPink,
   },
   {
     index: "02",
-    name: "Luminora Summit",
-    category: "Corporate Experience",
-    location: "Whitefield, Bangalore",
+    name: "Sacred Vows",
+    category: "Wedding Event",
+    location: "Bangalore, IN",
     year: "2025",
-    description:
-      "A 2,000-guest annual summit staged as theatre — sculptural lighting, a single sweeping arc, zero visible technology.",
-    image: work2,
+    description: "Marigold drapes, a silver jhoola and a hand-painted mandap backdrop.",
+    image: gallery.traditionalMandap,
   },
   {
     index: "03",
-    name: "Salt & Gold",
-    category: "Destination Wedding",
-    location: "Goa, IN",
-    year: "2024",
-    description:
-      "Three days on the coast. One long table at the water's edge, lanterns overhead, dinner served as the sun dropped.",
-    image: work3,
+    name: "Zaara's Enchanted Forest",
+    category: "Themed Birthday",
+    location: "Bangalore, IN",
+    year: "2025",
+    description: "A glowing fairy door, neon butterflies and a garden built overnight.",
+    image: gallery.enchantedForestNight,
   },
   {
     index: "04",
-    name: "Aurelian Launch",
-    category: "Brand Experience",
-    location: "Indiranagar, Bangalore",
+    name: "Fifty & Golden",
+    category: "Milestone Celebration",
+    location: "Bangalore, IN",
     year: "2024",
-    description:
-      "A fragrance house debut built around silence, stone and a single beam of light. Ninety guests, no stage, no speeches.",
-    image: work4,
+    description: "Ivory arches, pampas and marquee letters on an open lawn.",
+    image: gallery.goldenFifty,
   },
   {
     index: "05",
-    name: "Courtyard No. 9",
-    category: "Social Celebration",
-    location: "Mysuru, IN",
+    name: "Dravin's Royal Court",
+    category: "Themed Birthday",
+    location: "Bangalore, IN",
     year: "2024",
-    description:
-      "A heritage courtyard, candlelight only, and a suspended garden that turned a birthday dinner into an heirloom.",
-    image: work5,
+    description: "Gold-tipped castle towers, a carriage and a crowned first birthday.",
+    image: gallery.royalCastleGold,
   },
   {
     index: "06",
-    name: "Field of Lights",
-    category: "Large-Scale Event",
-    location: "Nandi Hills, Bangalore",
-    year: "2023",
-    description:
-      "Eighteen thousand people, one horizon of light. Built in eleven days, struck in one night, remembered for years.",
-    image: work6,
+    name: "Level 12 — Game On",
+    category: "Teen Celebration",
+    location: "Bangalore, IN",
+    year: "2024",
+    description: "Neon controllers, cobalt chrome balloons and an arcade-lit stage.",
+    image: gallery.gamingArena,
   },
 ];
 
@@ -92,42 +77,32 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    title: "Weddings",
+    title: "Themed Birthdays",
+    line: "Fairy gardens, safaris and castles, built to scale.",
+    image: gallery.fairyPurple,
+  },
+  {
+    title: "Traditional Events",
+    line: "Poojas, naming ceremonies and festive rituals.",
+    image: gallery.poojaTraditional,
+  },
+  {
+    title: "Wedding Events",
     line: "Ceremony, ritual and celebration, designed end to end.",
-    image: work1,
+    image: gallery.traditionalMandap,
   },
   {
     title: "Corporate Events",
-    line: "Summits, galas and launches with the polish of a premiere.",
-    image: work2,
-  },
-  {
-    title: "Destination Events",
-    line: "Coast, palace or hillside — logistics made invisible.",
-    image: work3,
-  },
-  {
-    title: "Brand Experiences",
-    line: "Physical storytelling for houses with something to say.",
-    image: work4,
-  },
-  {
-    title: "Social Celebrations",
-    line: "Intimate dinners, milestones and private evenings.",
-    image: work5,
-  },
-  {
-    title: "Production & Design",
-    line: "Sets, light, sound and flowers, built by our own crew.",
-    image: work6,
+    line: "Launches, galas and milestones with polish.",
+    image: gallery.goldMilestone59,
   },
 ];
 
 export const socialGrid = [
-  { src: story2, alt: "Bride silhouetted against a glowing reception entrance", span: "tall" },
-  { src: grid1, alt: "Couple dancing beneath a canopy of warm lights", span: "small" },
-  { src: work3, alt: "Coastal dinner table at golden hour", span: "wide" },
-  { src: grid2, alt: "Brass candle installation detail", span: "small" },
-  { src: story1, alt: "Hands finishing a floral place setting", span: "small" },
-  { src: work2, alt: "Sculptural stage lighting at a corporate gala", span: "wide" },
+  { src: gallery.peppaPlayland, alt: "Peppa themed children's party stage", span: "tall" },
+  { src: gallery.winterCarnival, alt: "Winter carnival birthday setup with marquee letters", span: "small" },
+  { src: gallery.safariWildOne, alt: "Safari themed first birthday garden setup", span: "wide" },
+  { src: gallery.bossBaby, alt: "Boss Baby themed first birthday decor", span: "small" },
+  { src: gallery.teddyPicnic, alt: "Teddy bear themed birthday stage in orange and cream", span: "small" },
+  { src: gallery.travelBabyshower, alt: "Travel themed baby shower stage", span: "wide" },
 ] as const;
