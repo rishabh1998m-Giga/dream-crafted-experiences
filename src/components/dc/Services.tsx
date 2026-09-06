@@ -1,31 +1,28 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { MaskLines, Reveal } from "./Primitives";
-import work1 from "@/assets/work-1.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work5 from "@/assets/work-5.jpg";
-import story1 from "@/assets/story-1.jpg";
+import { gallery } from "@/lib/gallery";
 
 const services = [
   {
     n: "01",
     title: "Themed Birthdays",
-    image: work5,
+    image: gallery.fairyPurple,
   },
   {
     n: "02",
     title: "Traditional Events",
-    image: story1,
+    image: gallery.poojaTraditional,
   },
   {
     n: "03",
     title: "Wedding Events",
-    image: work1,
+    image: gallery.traditionalMandap,
   },
   {
     n: "04",
     title: "Corporate Events",
-    image: work2,
+    image: gallery.goldMilestone59,
   },
 ];
 
