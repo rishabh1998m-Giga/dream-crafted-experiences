@@ -1,18 +1,13 @@
 import { Reveal } from "./Primitives";
-import grid1 from "@/assets/grid-1.jpg";
-import grid2 from "@/assets/grid-2.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work4 from "@/assets/work-4.jpg";
-import work6 from "@/assets/work-6.jpg";
-import story1 from "@/assets/story-1.jpg";
+import { gallery } from "@/lib/gallery";
 
 const posts = [
-  { src: grid1, alt: "Brass candelabra and ivory florals on a long banquet table" },
-  { src: work2, alt: "Guests dancing beneath suspended floral installation" },
-  { src: grid2, alt: "Detail of hand-calligraphed place setting" },
-  { src: work4, alt: "Palace courtyard lit for an evening reception" },
-  { src: story1, alt: "Bride's entrance through a corridor of lanterns" },
-  { src: work6, alt: "Late-night dessert table in candlelight" },
+  { src: gallery.peppaPlayland, alt: "Peppa themed children's party stage with balloons and cake table" },
+  { src: gallery.winterCarnival, alt: "Winter carnival birthday setup with marquee letters and ferris wheel" },
+  { src: gallery.bossBaby, alt: "Boss Baby themed first birthday decor in blue and black" },
+  { src: gallery.jungleCarnival, alt: "Jungle themed birthday stage with animal props and balloon arch" },
+  { src: gallery.bearlyWait, alt: "Teddy bear baby shower backdrop with pastel balloons" },
+  { src: gallery.fiftyFabulous, alt: "Pink and floral fiftieth birthday backdrop" },
 ];
 
 export function Feed() {

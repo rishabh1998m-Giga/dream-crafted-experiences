@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import story1 from "@/assets/story-1.jpg";
-import story2 from "@/assets/story-2.jpg";
+import { gallery } from "@/lib/gallery";
 import { MaskLines, Reveal } from "./Primitives";
 
 export function Story() {
@@ -58,8 +57,8 @@ export function Story() {
             <div className="mt-16 hidden lg:block">
               <motion.div style={{ y: yA }} className="relative w-[78%]">
                 <img
-                  src={story1}
-                  alt="Hands finishing a floral place setting by candlelight"
+                  src={gallery.fantasyForest}
+                  alt="Fantasy themed birthday installation with glowing arches and florals"
                   loading="lazy"
                   width={1200}
                   height={1504}
@@ -72,8 +71,8 @@ export function Story() {
           <div className="lg:col-span-5">
             <motion.div style={{ y: yB }} className="relative">
               <img
-                src={story2}
-                alt="Bride silhouetted against a glowing reception entrance"
+                src={gallery.princessCastle}
+                alt="Pink princess castle themed birthday stage at dusk"
                 loading="lazy"
                 width={1200}
                 height={1600}

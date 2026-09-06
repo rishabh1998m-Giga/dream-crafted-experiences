@@ -1,5 +1,5 @@
 import { MaskLines, Reveal } from "./Primitives";
-import story2 from "@/assets/story-2.jpg";
+import { gallery } from "@/lib/gallery";
 
 const pillars = [
   { k: "Restraint" },
@@ -43,8 +43,8 @@ export function Philosophy() {
         <Reveal delay={0.1} className="relative">
           <div className="sticky top-28 overflow-hidden">
             <img
-              src={story2}
-              alt="Candlelit tablescape styled by Dream Corner in Bangalore"
+              src={gallery.enchantedForestNight}
+              alt="Enchanted forest themed birthday installation by Dream Corner in Bangalore"
               className="h-[520px] w-full object-cover md:h-[720px]"
               loading="lazy"
             />
