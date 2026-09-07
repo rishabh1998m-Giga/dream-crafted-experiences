@@ -33,7 +33,7 @@ export function Services() {
     <section id="services" className="relative overflow-hidden bg-ink py-28 md:py-40">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <h2 className="display text-[10vw] leading-[0.88] md:text-[5.4vw]">
+          <h2 className="display text-4xl leading-[1.02] sm:text-5xl lg:text-6xl">
             <MaskLines lines={["What we", "compose"]} />
           </h2>
           <Reveal delay={0.1}>
@@ -82,7 +82,7 @@ export function Services() {
                     <span className="relative font-sans text-[10px] tracking-[0.3em] text-brass">
                       {s.n}
                     </span>
-                    <h3 className="display relative flex-1 text-4xl transition-transform duration-[700ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-3 md:text-6xl">
+                    <h3 className="display relative min-w-0 flex-1 text-3xl leading-tight transition-transform duration-[700ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-3 md:text-4xl">
                       {s.title}
                     </h3>
                   </div>

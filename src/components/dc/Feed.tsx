@@ -15,7 +15,7 @@ export function Feed() {
     <section className="relative overflow-hidden bg-ink pb-28 md:pb-36">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10">
         <div className="flex flex-wrap items-end justify-between gap-6 border-t border-border pt-10">
-          <h2 className="display text-4xl md:text-6xl">From the studio</h2>
+          <h2 className="display text-4xl leading-[1.02] sm:text-5xl lg:text-6xl">From the studio</h2>
           <a
             href="https://instagram.com"
             target="_blank"

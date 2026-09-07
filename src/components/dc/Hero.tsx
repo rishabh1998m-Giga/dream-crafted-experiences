@@ -67,7 +67,7 @@ export function Hero() {
           Bangalore
         </motion.p>
 
-        <h1 className="display text-[10.5vw] leading-[0.86] text-bone sm:text-[8.5vw] lg:text-[6.6vw]">
+        <h1 className="display text-4xl leading-[1.02] text-bone sm:text-5xl lg:text-6xl">
           <MaskLines
             lines={["Dreams,", "crafted into", "experiences."]}
             delay={0.15}

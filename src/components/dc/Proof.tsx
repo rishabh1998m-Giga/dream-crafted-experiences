@@ -30,7 +30,7 @@ export function Proof() {
         <div className="grid gap-y-12 border-y border-border py-14 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.06} className="px-2">
-              <p className="display text-6xl text-brass md:text-7xl">
+              <p className="display text-5xl text-brass md:text-6xl">
                 <CountUp to={s.to} suffix={s.suffix} />
               </p>
               <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.28em] text-muted-foreground">

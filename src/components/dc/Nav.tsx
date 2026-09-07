@@ -205,7 +205,7 @@ export function Nav() {
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.18 + i * 0.06, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                    className="display text-[11vw] leading-[1.05] text-ink"
+                    className="display text-4xl leading-[1.1] text-ink sm:text-5xl"
                   >
                     {l.label}
                   </motion.a>
