@@ -46,7 +46,7 @@ export function Contact() {
           <Reveal>
             <p className="eyebrow">Enquiries</p>
           </Reveal>
-          <h2 className="display mt-8 text-[10vw] leading-[0.88] md:text-[5vw]">
+          <h2 className="display mt-8 text-4xl leading-[1.02] sm:text-5xl lg:text-6xl">
             <MaskLines lines={["Let's bring", "your event", "to life."]} />
           </h2>
           <Reveal delay={0.12}>

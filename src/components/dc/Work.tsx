@@ -92,7 +92,7 @@ export function Work() {
         <div className="mx-auto mb-10 flex w-full max-w-[1600px] items-end justify-between px-6 md:px-10">
           <div>
             <p className="eyebrow mb-6">02 — Selected work</p>
-            <h2 className="display text-[8.5vw] leading-[0.9] text-bone sm:text-[5.4vw] lg:text-[3.5vw]">
+            <h2 className="display text-4xl leading-[1.02] text-bone sm:text-5xl lg:text-6xl">
               <MaskLines lines={["Celebrations"]} />
               <MaskLines lines={["worth remembering."]} lineClassName="italic" delay={0.1} />
             </h2>
