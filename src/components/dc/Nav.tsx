@@ -18,8 +18,8 @@ function Wordmark({ compact = false }: { compact?: boolean }) {
       <img
         src={logo.url}
         alt="Dream Corner logo"
-        className="rounded-full shadow-[0_2px_10px_rgba(51,0,79,0.12)] ring-1 ring-ink/10 transition-all duration-700"
-        style={{ width: compact ? 40 : 54, height: compact ? 40 : 54 }}
+        className="rounded-full shadow-[0_2px_14px_rgba(51,0,79,0.18)] ring-1 ring-ink/10 transition-all duration-700"
+        style={{ width: compact ? 52 : 68, height: compact ? 52 : 68 }}
       />
     </a>
   );
@@ -211,9 +211,6 @@ export function Nav() {
                   </motion.a>
                 ))}
               </nav>
-              <p className="font-sans text-[10px] uppercase tracking-[0.3em] text-ink/55">
-                Bangalore · Est. 2020
-              </p>
             </div>
           </motion.div>
         )}
