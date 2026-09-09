@@ -52,8 +52,8 @@
 :root {
   --radius: 2px;
 
-  --ink: oklch(0.251 0.128 308);
-  --ink-soft: oklch(0.30 0.125 307);
+  --ink: oklch(0.30 0.10 310);
+  --ink-soft: oklch(0.34 0.095 309);
   --bone: oklch(0.955 0.014 92);
   --bone-dim: oklch(0.87 0.018 88);
   --brass: oklch(0.826 0.142 86);

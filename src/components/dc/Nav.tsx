@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Magnetic } from "./Primitives";
-import logo from "@/assets/dream-corner-logo.png.asset.json";
+import logo from "@/assets/dc-logo.png.asset.json";
 
 const links = [
   { label: "About", href: "#about" },
@@ -18,8 +18,8 @@ function Wordmark({ compact = false }: { compact?: boolean }) {
       <img
         src={logo.url}
         alt="Dream Corner logo"
-        className="rounded-full shadow-[0_2px_14px_rgba(51,0,79,0.18)] ring-1 ring-ink/10 transition-all duration-700"
-        style={{ width: compact ? 52 : 68, height: compact ? 52 : 68 }}
+        className="block transition-all duration-700"
+        style={{ width: compact ? 132 : 172, height: "auto" }}
       />
     </a>
   );
