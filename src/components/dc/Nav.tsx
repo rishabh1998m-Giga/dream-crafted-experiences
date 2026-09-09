@@ -141,39 +141,37 @@ export function Nav() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[65] bg-bone paper-texture lg:hidden"
+            className="fixed inset-0 z-[65] flex flex-col bg-ink lg:hidden"
             initial={{ clipPath: "inset(0 0 100% 0)" }}
             animate={{ clipPath: "inset(0 0 0% 0)" }}
             exit={{ clipPath: "inset(0 0 100% 0)" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="flex h-full flex-col justify-between px-6 py-8">
-              <div className="flex items-center justify-between">
-                <Wordmark compact />
-                <button
-                  onClick={() => setOpen(false)}
-                  aria-label="Close menu"
-                  className="font-sans text-[11px] uppercase tracking-[0.28em] text-brass"
-                >
-                  Close
-                </button>
-              </div>
-              <nav className="flex flex-col gap-2">
-                {links.map((l, i) => (
-                  <motion.a
-                    key={l.href}
-                    href={l.href}
-                    onClick={() => setOpen(false)}
-                    initial={{ opacity: 0, y: 24 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.18 + i * 0.06, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                    className="display text-4xl leading-[1.1] text-ink sm:text-5xl"
-                  >
-                    {l.label}
-                  </motion.a>
-                ))}
-              </nav>
+            <div className="flex items-center justify-between px-6 py-5">
+              <Wordmark compact />
+              <button
+                onClick={() => setOpen(false)}
+                aria-label="Close menu"
+                className="font-sans text-[11px] uppercase tracking-[0.28em] text-brass"
+              >
+                Close
+              </button>
             </div>
+            <nav className="flex flex-1 flex-col justify-center gap-3 px-6 pb-12">
+              {links.map((l, i) => (
+                <motion.a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.18 + i * 0.06, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                  className="display text-4xl leading-[1.1] text-bone sm:text-5xl"
+                >
+                  {l.label}
+                </motion.a>
+              ))}
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
