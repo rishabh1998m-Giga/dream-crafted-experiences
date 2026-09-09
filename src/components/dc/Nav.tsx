@@ -57,21 +57,19 @@ export function Nav() {
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]",
-          scrolled
-            ? "border-b border-ink/8 bg-bone/95 backdrop-blur-md"
-            : "border-b border-transparent bg-transparent backdrop-blur-none"
+          "fixed inset-x-0 top-0 z-50 border-b border-bone/10 bg-ink transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]",
+          scrolled && "shadow-[0_12px_40px_rgba(0,0,0,0.22)]"
         )}
         style={{
-          paddingTop: scrolled ? 12 : 20,
-          paddingBottom: scrolled ? 12 : 20,
+          paddingTop: scrolled ? 14 : 18,
+          paddingBottom: scrolled ? 14 : 18,
           transform: hidden && !open ? "translateY(-100%)" : "translateY(0)",
         }}
       >
         <div
           className="mx-auto flex items-center justify-between px-6 transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)] md:px-10"
           style={{
-            maxWidth: scrolled ? 1180 : 1600,
+            maxWidth: scrolled ? 1180 : 1400,
           }}
         >
           <Wordmark compact={scrolled} />
@@ -82,11 +80,7 @@ export function Nav() {
                 <a
                   href={l.href}
                   data-cursor="true"
-                  className={cn(
-                    "link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] transition-colors duration-300",
-                    scrolled ? "text-ink hover:text-ink/70" : "text-bone hover:text-bone/70"
-                  )}
-
+                  className="link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] text-bone/85 transition-colors duration-300 hover:text-bone"
                 >
                   {l.label}
                 </a>
@@ -99,36 +93,12 @@ export function Nav() {
                 className="group relative inline-flex items-center overflow-hidden px-5 py-2.5 font-sans text-[10.5px] uppercase tracking-[0.26em] transition-all duration-500"
               >
                 {/* background */}
-                <span
-                  className={cn(
-                    "absolute inset-0 transition-all duration-500",
-                    scrolled
-                      ? "bg-ink/90 shadow-lg group-hover:bg-ink group-hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)]"
-                      : "bg-bone/15 shadow-lg group-hover:bg-bone/25 group-hover:shadow-[0_12px_40px_rgba(211,185,140,0.12)]"
-                  )}
-                />
+                <span className="absolute inset-0 bg-bone/10 shadow-lg transition-all duration-500 group-hover:bg-bone/18 group-hover:shadow-[0_12px_40px_rgba(211,185,140,0.14)]" />
                 {/* inner border */}
-                <span
-                  className={cn(
-                    "absolute inset-[3px] border transition-all duration-500",
-                    scrolled
-                      ? "border-brass/25 group-hover:border-brass/50"
-                      : "border-brass/30 group-hover:border-brass/55"
-                  )}
-                />
+                <span className="absolute inset-[3px] border border-brass/35 transition-all duration-500 group-hover:border-brass/60" />
                 {/* corner accents */}
-                <span
-                  className={cn(
-                    "absolute left-0 top-0 h-2 w-2 -translate-x-1 -translate-y-1 border-l border-t transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0",
-                    scrolled ? "border-brass/70" : "border-brass"
-                  )}
-                />
-                <span
-                  className={cn(
-                    "absolute bottom-0 right-0 h-2 w-2 translate-x-1 translate-y-1 border-r border-b transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0",
-                    scrolled ? "border-brass/70" : "border-brass"
-                  )}
-                />
+                <span className="absolute left-0 top-0 h-2 w-2 -translate-x-1 -translate-y-1 border-l border-t border-brass transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0" />
+                <span className="absolute bottom-0 right-0 h-2 w-2 translate-x-1 translate-y-1 border-r border-b border-brass transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0" />
                 {/* text + arrow */}
                 <span className="relative z-10 flex items-center gap-2 text-bone transition-colors duration-300 group-hover:text-brass">
                   Plan Your Event
@@ -144,14 +114,7 @@ export function Nav() {
                   </svg>
                 </span>
                 {/* bottom highlight line */}
-                <span
-                  className={cn(
-                    "absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 transition-all duration-700 group-hover:w-full",
-                    scrolled
-                      ? "bg-gradient-to-r from-transparent via-brass/60 to-transparent"
-                      : "bg-gradient-to-r from-transparent via-brass to-transparent"
-                  )}
-                />
+                <span className="absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 bg-gradient-to-r from-transparent via-brass to-transparent transition-all duration-700 group-hover:w-full" />
               </a>
             </Magnetic>
           </nav>
@@ -162,9 +125,8 @@ export function Nav() {
             aria-label="Open menu"
             className="flex flex-col items-end gap-[6px] lg:hidden"
           >
-            <span className={cn("block h-px w-8", scrolled ? "bg-ink" : "bg-bone")} />
-            <span className={cn("block h-px w-5", scrolled ? "bg-ink" : "bg-bone")} />
-
+            <span className="block h-px w-8 bg-bone" />
+            <span className="block h-px w-5 bg-bone" />
           </button>
         </div>
       </header>
