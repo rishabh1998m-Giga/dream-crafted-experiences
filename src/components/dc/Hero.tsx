@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import heroPoster from "@/assets/hero-poster.jpg";
-import heroVideo from "@/assets/hero.mp4.asset.json";
+import heroVideo from "@/assets/hero-indian.mp4.asset.json";
 import { LineButton, MaskLines } from "./Primitives";
 
 export function Hero() {
@@ -29,7 +29,7 @@ export function Hero() {
       <motion.div className="absolute inset-0" style={{ y, scale }}>
         <img
           src={heroPoster}
-          alt="Guests celebrating at a candlelit luxury event designed by Dream Corner"
+          alt="Indian guests celebrating at a premium event designed by Dream Corner"
           width={1920}
           height={1088}
           fetchPriority="high"
