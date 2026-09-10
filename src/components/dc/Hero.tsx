@@ -56,17 +56,8 @@ export function Hero() {
 
       <motion.div
         style={{ opacity: fade }}
-        className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-6 pb-16 md:px-10 md:pb-20"
+        className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-6 pb-12 md:px-10 md:pb-14"
       >
-        <motion.p
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1.2 }}
-          className="eyebrow mb-8"
-        >
-          Bangalore
-        </motion.p>
-
         <h1 className="display text-4xl leading-[1.02] text-bone sm:text-5xl lg:text-6xl">
           <MaskLines
             lines={["Dreams,", "crafted into", "experiences."]}
@@ -86,8 +77,7 @@ export function Hero() {
           experiences.
         </motion.p>
 
-        <div className="mt-10 flex items-center gap-8 border-t border-bone/25 pt-8">
-
+        <div className="mt-10 flex items-center gap-8">
           <motion.div
             initial={reduce ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -98,20 +88,6 @@ export function Hero() {
         </div>
       </motion.div>
 
-      <motion.div
-        style={{ opacity: fade }}
-        className="pointer-events-none absolute bottom-8 right-6 z-10 hidden items-center gap-3 md:right-10 md:flex"
-      >
-        <span className="font-sans text-[9px] uppercase tracking-[0.3em] text-bone/60">Scroll</span>
-        <span className="block h-10 w-px overflow-hidden bg-bone/25">
-
-          <motion.span
-            className="block h-4 w-px bg-brass"
-            animate={{ y: [-16, 40] }}
-            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </span>
-      </motion.div>
     </section>
   );
 }

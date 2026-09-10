@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Magnetic } from "./Primitives";
-import logo from "@/assets/dc-logo.png.asset.json";
+import logo from "@/assets/dream-corner-round.png";
 
 const links = [
   { label: "About", href: "#about" },
@@ -19,12 +19,12 @@ function Wordmark({ compact = false }: { compact?: boolean }) {
       data-cursor="TOP"
       aria-label="Dream Corner"
       className={cn(
-        "block aspect-square overflow-hidden rounded-full border border-brass/55 bg-ink shadow-[0_10px_32px_rgba(0,0,0,0.3)] transition-all duration-700",
-        compact ? "w-[66px]" : "w-[82px] md:w-[90px]"
+        "block aspect-square overflow-hidden rounded-full border border-brass/60 bg-ink shadow-[0_10px_32px_rgba(0,0,0,0.3)] transition-all duration-700",
+        compact ? "w-[72px]" : "w-[90px] md:w-[98px]"
       )}
     >
       <img
-        src={logo.url}
+        src={logo}
         alt="Dream Corner logo"
         className="h-full w-full object-cover"
       />
