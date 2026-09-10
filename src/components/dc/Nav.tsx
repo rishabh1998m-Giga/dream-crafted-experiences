@@ -14,12 +14,19 @@ const links = [
 
 function Wordmark({ compact = false }: { compact?: boolean }) {
   return (
-    <a href="#top" data-cursor="TOP" aria-label="Dream Corner" className="block">
+    <a
+      href="#top"
+      data-cursor="TOP"
+      aria-label="Dream Corner"
+      className={cn(
+        "block aspect-square overflow-hidden rounded-full border border-brass/55 bg-ink shadow-[0_10px_32px_rgba(0,0,0,0.3)] transition-all duration-700",
+        compact ? "w-[66px]" : "w-[82px] md:w-[90px]"
+      )}
+    >
       <img
         src={logo.url}
         alt="Dream Corner logo"
-        className="block transition-all duration-700"
-        style={{ width: compact ? 132 : 172, height: "auto" }}
+        className="h-full w-full object-cover"
       />
     </a>
   );
@@ -57,12 +64,12 @@ export function Nav() {
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 border-b border-bone/10 bg-ink transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]",
-          scrolled && "shadow-[0_12px_40px_rgba(0,0,0,0.22)]"
+          "fixed inset-x-0 top-0 z-50 border-b border-transparent bg-transparent transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]",
+          scrolled && "border-bone/10 bg-ink/35 shadow-[0_12px_40px_rgba(0,0,0,0.16)] backdrop-blur-md"
         )}
         style={{
-          paddingTop: scrolled ? 14 : 18,
-          paddingBottom: scrolled ? 14 : 18,
+          paddingTop: scrolled ? 10 : 14,
+          paddingBottom: scrolled ? 10 : 14,
           transform: hidden && !open ? "translateY(-100%)" : "translateY(0)",
         }}
       >
