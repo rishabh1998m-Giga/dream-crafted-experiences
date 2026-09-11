@@ -41,21 +41,21 @@ export function Contact() {
 
   return (
     <section id="contact" className="on-bone paper-texture relative overflow-hidden">
-      <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-28 md:px-10 md:py-40 lg:grid-cols-2 lg:gap-24">
+      <div className="mx-auto grid max-w-[1600px] gap-12 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-2 lg:gap-16">
         <div>
           <Reveal>
             <p className="eyebrow">Enquiries</p>
           </Reveal>
-          <h2 className="display mt-8 text-4xl leading-[1.02] sm:text-5xl lg:text-6xl">
+          <h2 className="display mt-6 text-4xl leading-[1.02] sm:text-5xl lg:text-6xl">
             <MaskLines lines={["Let's bring", "your event", "to life."]} />
           </h2>
           <Reveal delay={0.12}>
-            <p className="mt-8 max-w-sm font-sans text-sm leading-[1.9] text-muted-foreground">
+            <p className="mt-6 max-w-sm font-sans text-sm leading-[1.9] text-muted-foreground">
               Life is full of reasons to celebrate. Let us make them unforgettable.
             </p>
           </Reveal>
           <Reveal delay={0.16}>
-            <div className="mt-10 space-y-3 font-sans text-sm">
+            <div className="mt-8 space-y-3 font-sans text-sm">
               <p>
                 <a href="mailto:hello@dreamcorner.in" data-cursor="MAIL" className="link-underline">
                   hello@dreamcorner.in
@@ -77,7 +77,7 @@ export function Contact() {
               e.preventDefault();
               setSent(true);
             }}
-            className="lg:pt-24"
+            className="lg:pt-14"
           >
             <Field label="Your name" name="name" />
             <Field label="Email" name="email" type="email" />

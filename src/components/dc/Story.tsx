@@ -10,32 +10,12 @@ export function Story() {
   const yB = useTransform(scrollYProgress, [0, 1], ["10%", "-10%"]);
 
   return (
-    <section id="about" className="paper-texture relative overflow-hidden bg-ink py-28 md:py-40">
-      {/* marquee statement */}
-      <div className="relative mb-24 overflow-hidden border-y border-border py-5 md:mb-36">
-        <div className="animate-marquee flex w-max whitespace-nowrap will-change-transform">
-          {Array.from({ length: 2 }).map((_, k) => (
-            <span key={k} className="flex">
-              {["Creating infinite memories"].map(
-                (t) => (
-                  <span
-                    key={t + k}
-                    className="mx-8 font-sans text-[11px] uppercase tracking-[0.42em] text-muted-foreground"
-                  >
-                    {t} <span className="ml-8 text-brass">◆</span>
-                  </span>
-                ),
-              )}
-            </span>
-          ))}
-        </div>
-      </div>
-
+    <section id="about" className="paper-texture relative overflow-hidden bg-ink py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-[1600px] px-6 md:px-10">
-        <div className="grid gap-16 lg:grid-cols-12 lg:gap-10">
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-7">
             <Reveal>
-              <p className="eyebrow mb-10">01 — Who we are</p>
+              <p className="eyebrow mb-7">01 — Who we are</p>
             </Reveal>
             <h2 className="display text-4xl leading-[1.02] text-bone sm:text-5xl lg:text-6xl">
               <MaskLines lines={["Creating", "infinite"]} />
@@ -43,7 +23,7 @@ export function Story() {
             </h2>
 
             <Reveal delay={0.08}>
-              <p className="mt-12 max-w-md font-sans text-sm leading-[1.9] text-muted-foreground">
+              <p className="mt-8 max-w-md font-sans text-sm leading-[1.9] text-muted-foreground">
                 From weddings to corporate events, birthdays to grand launches. We create moments
                 that leave lasting memories.
               </p>
@@ -54,7 +34,7 @@ export function Story() {
               </p>
             </Reveal>
 
-            <div className="mt-16 hidden lg:block">
+            <div className="mt-10 hidden lg:block">
               <motion.div style={{ y: yA }} className="relative w-[78%]">
                 <img
                   src={gallery.fantasyForest}
