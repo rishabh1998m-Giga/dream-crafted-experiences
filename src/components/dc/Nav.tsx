@@ -67,22 +67,26 @@ export function Nav() {
           "fixed inset-x-0 top-0 z-50 transition-all duration-[700ms] ease-[cubic-bezier(.16,1,.3,1)]"
         )}
         style={{
-          paddingTop: scrolled ? 8 : 14,
+          paddingTop: scrolled ? 10 : 18,
           transform: hidden && !open ? "translateY(-100%)" : "translateY(0)",
         }}
       >
         <div
           className={cn(
-            "group/nav mx-4 flex items-center justify-between rounded-full border border-bone/20 bg-ink/12 px-4 py-2 shadow-[0_16px_48px_rgba(0,0,0,0.18)] backdrop-blur-xl transition-all duration-[700ms] ease-[cubic-bezier(.16,1,.3,1)] hover:border-bone/30 hover:bg-ink/20 md:mx-auto md:px-5",
-            scrolled && "border-bone/15 bg-ink/55 shadow-[0_12px_36px_rgba(0,0,0,0.24)]"
+            "group/nav mx-auto flex items-center justify-between rounded-full border px-4 py-2 transition-all duration-[700ms] ease-[cubic-bezier(.16,1,.3,1)] md:px-5",
+            scrolled
+              ? "max-w-[1160px] border-bone/15 bg-ink/55 shadow-[0_12px_36px_rgba(0,0,0,0.24)] backdrop-blur-xl"
+              : "max-w-[1320px] border-transparent bg-transparent shadow-none backdrop-blur-none"
           )}
-          style={{
-            maxWidth: scrolled ? 1160 : 1320,
-          }}
         >
           <Wordmark compact={scrolled} />
 
-          <nav className="hidden items-center gap-2 lg:flex">
+          <nav
+            className={cn(
+              "hidden items-center gap-2 overflow-hidden transition-all duration-[700ms] ease-[cubic-bezier(.16,1,.3,1)] lg:flex",
+              scrolled ? "max-w-[900px] opacity-100" : "max-w-0 opacity-0"
+            )}
+          >
             {links.map((l) => (
               <Magnetic key={l.href} strength={0.18}>
                 <a
@@ -124,7 +128,10 @@ export function Nav() {
             onClick={() => setOpen(true)}
             data-cursor="MENU"
             aria-label="Open menu"
-            className="flex flex-col items-end gap-[6px] lg:hidden"
+            className={cn(
+              "flex flex-col items-end gap-[6px] transition-opacity duration-500 lg:hidden",
+              scrolled ? "opacity-100" : "opacity-0"
+            )}
           >
             <span className="block h-px w-8 bg-bone" />
             <span className="block h-px w-5 bg-bone" />
