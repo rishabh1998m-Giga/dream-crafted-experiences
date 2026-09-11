@@ -30,7 +30,7 @@ export function Services() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section id="services" className="relative overflow-hidden bg-ink py-28 md:py-40">
+    <section id="services" className="relative overflow-hidden bg-ink py-20 md:py-28">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <h2 className="display text-4xl leading-[1.02] sm:text-5xl lg:text-6xl">
@@ -42,7 +42,7 @@ export function Services() {
         </div>
 
         <div
-          className="relative mt-16 md:mt-24"
+          className="relative mt-12 md:mt-16"
           onMouseLeave={() => setActive(null)}
         >
           {/* floating hover preview (desktop) */}
@@ -73,7 +73,7 @@ export function Services() {
                   <div
                     data-cursor="VIEW"
                     onMouseEnter={() => setActive(i)}
-                    className="group relative flex cursor-default items-baseline gap-6 border-t border-border py-7 transition-colors duration-500 md:gap-12 md:py-9"
+                    className="group relative flex cursor-default items-baseline gap-6 border-t border-border py-6 transition-colors duration-500 md:gap-12 md:py-7"
                   >
                     <span
                       className="absolute inset-0 -z-0 origin-left scale-x-0 bg-brass/8 transition-transform duration-[800ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-x-100"

@@ -22,12 +22,12 @@ const quotes = [
 
 export function Proof() {
   return (
-    <section className="relative overflow-hidden bg-ink py-28 md:py-36">
+    <section className="relative overflow-hidden bg-ink py-20 md:py-28">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10">
-        <Reveal className="mb-12">
+        <Reveal className="mb-8">
           <p className="eyebrow">Your occasion deserves excellence.</p>
         </Reveal>
-        <div className="grid gap-y-12 border-y border-border py-14 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-y-10 border-y border-border py-10 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.06} className="px-2">
               <p className="display text-5xl text-brass md:text-6xl">
@@ -40,7 +40,7 @@ export function Proof() {
           ))}
         </div>
 
-        <div className="mt-24 grid gap-16 lg:grid-cols-2 lg:gap-24">
+        <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-16">
           {quotes.map((c, i) => (
             <Reveal key={c.a} delay={i * 0.1}>
               <blockquote>

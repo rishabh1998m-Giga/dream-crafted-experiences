@@ -86,10 +86,10 @@ export function Work() {
         className={
           isDesktop
             ? "sticky top-0 flex h-[100svh] flex-col justify-center overflow-hidden"
-            : "flex flex-col justify-center overflow-hidden py-24"
+            : "flex flex-col justify-center overflow-hidden py-20"
         }
       >
-        <div className="mx-auto mb-10 flex w-full max-w-[1600px] items-end justify-between px-6 md:px-10">
+        <div className="mx-auto mb-8 flex w-full max-w-[1600px] items-end justify-between px-6 md:px-10">
           <div>
             <p className="eyebrow mb-6">02 — Selected work</p>
             <h2 className="display text-4xl leading-[1.02] text-bone sm:text-5xl lg:text-6xl">
@@ -122,7 +122,7 @@ export function Work() {
           </div>
         )}
 
-        <div className="mx-auto mt-12 w-full max-w-[1600px] px-6 md:px-10">
+        <div className="mx-auto mt-8 w-full max-w-[1600px] px-6 md:px-10">
           <div className="h-px w-full bg-border">
             {isDesktop && <motion.div className="h-px bg-brass" style={{ width: progress }} />}
           </div>

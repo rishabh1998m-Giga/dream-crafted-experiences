@@ -12,9 +12,9 @@ const posts = [
 
 export function Feed() {
   return (
-    <section className="relative overflow-hidden bg-ink pb-28 md:pb-36">
+    <section className="relative overflow-hidden bg-ink pb-20 md:pb-28">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10">
-        <div className="flex flex-wrap items-end justify-between gap-6 border-t border-border pt-10">
+        <div className="flex flex-wrap items-end justify-between gap-5 border-t border-border pt-8">
           <h2 className="display text-4xl leading-[1.02] sm:text-5xl lg:text-6xl">From the studio</h2>
           <a
             href="https://instagram.com"
@@ -27,7 +27,7 @@ export function Feed() {
           </a>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3">
+        <div className="mt-8 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3">
           {posts.map((p, i) => (
             <Reveal key={p.alt} delay={(i % 3) * 0.06} y={20}>
               <a

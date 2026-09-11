@@ -64,32 +64,35 @@ export function Nav() {
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 border-b border-transparent bg-transparent transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)]",
-          scrolled && "border-bone/10 bg-ink/35 shadow-[0_12px_40px_rgba(0,0,0,0.16)] backdrop-blur-md"
+          "fixed inset-x-0 top-0 z-50 transition-all duration-[700ms] ease-[cubic-bezier(.16,1,.3,1)]"
         )}
         style={{
-          paddingTop: scrolled ? 10 : 14,
-          paddingBottom: scrolled ? 10 : 14,
+          paddingTop: scrolled ? 8 : 14,
           transform: hidden && !open ? "translateY(-100%)" : "translateY(0)",
         }}
       >
         <div
-          className="mx-auto flex items-center justify-between px-6 transition-all duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)] md:px-10"
+          className={cn(
+            "group/nav mx-4 flex items-center justify-between rounded-full border border-bone/20 bg-ink/12 px-4 py-2 shadow-[0_16px_48px_rgba(0,0,0,0.18)] backdrop-blur-xl transition-all duration-[700ms] ease-[cubic-bezier(.16,1,.3,1)] hover:border-bone/30 hover:bg-ink/20 md:mx-auto md:px-5",
+            scrolled && "border-bone/15 bg-ink/55 shadow-[0_12px_36px_rgba(0,0,0,0.24)]"
+          )}
           style={{
-            maxWidth: scrolled ? 1180 : 1400,
+            maxWidth: scrolled ? 1160 : 1320,
           }}
         >
           <Wordmark compact={scrolled} />
 
-          <nav className="hidden items-center gap-9 lg:flex">
+          <nav className="hidden items-center gap-2 lg:flex">
             {links.map((l) => (
               <Magnetic key={l.href} strength={0.18}>
                 <a
                   href={l.href}
                   data-cursor="true"
-                  className="link-underline font-sans text-[10.5px] uppercase tracking-[0.26em] text-bone/85 transition-colors duration-300 hover:text-bone"
+                  className="group/link relative flex items-center gap-2 rounded-full px-4 py-3 font-sans text-[10px] uppercase tracking-[0.22em] text-bone/80 transition-all duration-500 hover:bg-bone/10 hover:text-bone"
                 >
+                  <span className="h-1 w-1 scale-0 rounded-full bg-brass opacity-0 transition-all duration-500 group-hover/link:scale-100 group-hover/link:opacity-100" />
                   {l.label}
+                  <span className="absolute bottom-2 left-4 right-4 h-px origin-right scale-x-0 bg-brass/80 transition-transform duration-500 group-hover/link:origin-left group-hover/link:scale-x-100" />
                 </a>
               </Magnetic>
             ))}
@@ -97,17 +100,10 @@ export function Nav() {
               <a
                 href="#contact"
                 data-cursor="ENQUIRE"
-                className="group relative inline-flex items-center overflow-hidden px-5 py-2.5 font-sans text-[10.5px] uppercase tracking-[0.26em] transition-all duration-500"
+                className="group relative inline-flex items-center overflow-hidden rounded-full border border-bone/30 bg-bone px-6 py-3 font-sans text-[10px] uppercase tracking-[0.22em] shadow-[0_8px_28px_rgba(0,0,0,0.18)] transition-all duration-500 hover:scale-[1.04] hover:border-brass hover:shadow-[0_10px_34px_rgba(211,185,140,0.2)]"
               >
-                {/* background */}
-                <span className="absolute inset-0 bg-bone/10 shadow-lg transition-all duration-500 group-hover:bg-bone/18 group-hover:shadow-[0_12px_40px_rgba(211,185,140,0.14)]" />
-                {/* inner border */}
-                <span className="absolute inset-[3px] border border-brass/35 transition-all duration-500 group-hover:border-brass/60" />
-                {/* corner accents */}
-                <span className="absolute left-0 top-0 h-2 w-2 -translate-x-1 -translate-y-1 border-l border-t border-brass transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0" />
-                <span className="absolute bottom-0 right-0 h-2 w-2 translate-x-1 translate-y-1 border-r border-b border-brass transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0" />
-                {/* text + arrow */}
-                <span className="relative z-10 flex items-center gap-2 text-bone transition-colors duration-300 group-hover:text-brass">
+                <span className="absolute inset-0 translate-y-full bg-brass transition-transform duration-500 group-hover:translate-y-0" />
+                <span className="relative z-10 flex items-center gap-2 text-ink">
                   Plan Your Event
                   <svg
                     className="h-3.5 w-3.5 transition-all duration-500 group-hover:translate-x-1"
@@ -120,8 +116,6 @@ export function Nav() {
                     <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </span>
-                {/* bottom highlight line */}
-                <span className="absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 bg-gradient-to-r from-transparent via-brass to-transparent transition-all duration-700 group-hover:w-full" />
               </a>
             </Magnetic>
           </nav>
