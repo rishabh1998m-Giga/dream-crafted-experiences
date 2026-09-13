@@ -133,7 +133,7 @@ export function LineButton({
   const inner = (
     <span
       className={cn(
-        "group relative inline-flex items-center gap-4 overflow-hidden border px-8 py-4 font-sans text-[11px] uppercase tracking-[0.28em] transition-colors duration-500",
+        "group relative inline-flex min-h-12 items-center gap-3 overflow-hidden border px-6 py-3 font-sans text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 sm:gap-4 sm:px-8 sm:py-4 sm:text-[11px] sm:tracking-[0.28em]",
         tone === "brass"
           ? "border-brass/60 text-brass hover:text-primary-foreground"
           : "border-current text-foreground hover:text-background",

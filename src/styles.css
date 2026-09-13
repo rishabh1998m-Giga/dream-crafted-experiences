@@ -111,6 +111,7 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-synthesis-weight: none;
+    overflow-x: clip;
   }
 
   ::selection {
@@ -196,7 +197,7 @@
   font-family: var(--font-display);
   font-weight: 700;
   line-height: 0.98;
-  letter-spacing: -0.035em;
+  letter-spacing: 0;
 }
 
 @utility link-underline {
