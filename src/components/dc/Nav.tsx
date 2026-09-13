@@ -20,7 +20,7 @@ function Wordmark({ compact = false }: { compact?: boolean }) {
       aria-label="Dream Corner"
       className={cn(
         "block aspect-square overflow-hidden rounded-full border border-brass/60 bg-ink shadow-[0_10px_32px_rgba(0,0,0,0.3)] transition-all duration-700",
-        compact ? "w-[72px]" : "w-[90px] md:w-[98px]"
+        compact ? "w-16 md:w-[72px]" : "w-20 md:w-[98px]"
       )}
     >
       <img
@@ -73,7 +73,7 @@ export function Nav() {
       >
         <div
           className={cn(
-            "group/nav mx-auto flex items-center justify-between rounded-full border px-4 py-2 transition-all duration-[700ms] ease-[cubic-bezier(.16,1,.3,1)] md:px-5",
+            "group/nav mx-3 flex items-center justify-between rounded-full border px-3 py-2 transition-all duration-[700ms] ease-[cubic-bezier(.16,1,.3,1)] sm:mx-auto md:px-5",
             scrolled
               ? "max-w-[1160px] border-bone/15 bg-ink/55 shadow-[0_12px_36px_rgba(0,0,0,0.24)] backdrop-blur-xl"
               : "max-w-[1320px] border-transparent bg-transparent shadow-none backdrop-blur-none"
@@ -129,8 +129,8 @@ export function Nav() {
             data-cursor="MENU"
             aria-label="Open menu"
             className={cn(
-              "flex flex-col items-end gap-[6px] transition-opacity duration-500 lg:hidden",
-              scrolled ? "opacity-100" : "opacity-0"
+              "grid h-11 w-11 shrink-0 place-content-center justify-items-end gap-[6px] rounded-full transition-all duration-500 lg:hidden",
+              scrolled ? "bg-bone/10 opacity-100" : "bg-ink/20 opacity-100 backdrop-blur-sm"
             )}
           >
             <span className="block h-px w-8 bg-bone" />
@@ -155,17 +155,17 @@ export function Nav() {
             exit={{ clipPath: "inset(0 0 100% 0)" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="flex items-center justify-between px-6 py-5">
+            <div className="flex items-center justify-between px-5 py-4">
               <Wordmark compact />
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Close menu"
-                className="font-sans text-[11px] uppercase tracking-[0.28em] text-brass"
+                className="grid min-h-11 place-items-center px-2 font-sans text-xs uppercase tracking-[0.2em] text-brass"
               >
                 Close
               </button>
             </div>
-            <nav className="flex flex-1 flex-col justify-center gap-3 px-6 pb-12">
+            <nav className="flex flex-1 flex-col justify-center gap-2 px-5 pb-10">
               {links.map((l, i) => (
                 <motion.a
                   key={l.href}
@@ -174,7 +174,7 @@ export function Nav() {
                   initial={{ opacity: 0, y: 24 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.18 + i * 0.06, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                  className="display text-4xl leading-[1.1] text-bone sm:text-5xl"
+                  className="display py-1 text-[2rem] leading-[1.15] text-bone sm:text-5xl"
                 >
                   {l.label}
                 </motion.a>

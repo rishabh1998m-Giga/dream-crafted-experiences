@@ -12,22 +12,22 @@ const posts = [
 
 export function Feed() {
   return (
-    <section className="relative overflow-hidden bg-ink pb-20 md:pb-28">
-      <div className="mx-auto max-w-[1600px] px-6 md:px-10">
-        <div className="flex flex-wrap items-end justify-between gap-5 border-t border-border pt-8">
-          <h2 className="display text-4xl leading-[1.02] sm:text-5xl lg:text-6xl">From the studio</h2>
+    <section className="relative overflow-hidden bg-ink pb-16 md:pb-28">
+      <div className="mx-auto max-w-[1600px] px-5 sm:px-6 md:px-10">
+        <div className="grid gap-3 border-t border-border pt-7 sm:flex sm:flex-wrap sm:items-end sm:justify-between sm:gap-5 sm:pt-8">
+          <h2 className="display text-[2rem] leading-[1.06] sm:text-5xl lg:text-6xl">From the studio</h2>
           <a
             href="https://instagram.com"
             target="_blank"
             rel="noreferrer"
             data-cursor="FOLLOW"
-            className="link-underline font-sans text-[11px] uppercase tracking-[0.28em] text-brass"
+            className="link-underline w-fit font-sans text-[10px] uppercase tracking-[0.18em] text-brass sm:text-[11px] sm:tracking-[0.28em]"
           >
             @dreamcorner.events
           </a>
         </div>
 
-        <div className="mt-8 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3">
+        <div className="mt-6 grid grid-cols-2 gap-1.5 sm:mt-8 sm:gap-2 md:grid-cols-3 md:gap-3">
           {posts.map((p, i) => (
             <Reveal key={p.alt} delay={(i % 3) * 0.06} y={20}>
               <a
