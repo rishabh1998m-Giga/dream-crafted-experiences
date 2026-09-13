@@ -1,4 +1,4 @@
-import logo from "@/assets/dream-corner-logo.png.asset.json";
+const logo = { url: "/media/dream-corner-logo.png" };
 import { useState } from "react";
 import { LineButton, MaskLines, Reveal } from "./Primitives";
 
