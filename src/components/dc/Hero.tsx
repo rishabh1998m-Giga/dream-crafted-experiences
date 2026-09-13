@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import heroPoster from "@/assets/hero-poster.jpg";
-import heroVideo from "@/assets/hero-indian.mp4.asset.json";
+const heroVideo = { url: "/media/hero-indian.mp4" };
 import { LineButton, MaskLines } from "./Primitives";
 
 export function Hero() {
