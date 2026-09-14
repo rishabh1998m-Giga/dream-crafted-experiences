@@ -51,6 +51,7 @@ export function Hero() {
               e.currentTarget.style.opacity = "1";
             }}
           >
+            <source src="/media/hero-birthday.webm" type="video/webm" />
             <source src={heroVideo.url} type="video/mp4" />
           </video>
         )}
