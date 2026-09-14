@@ -38,17 +38,21 @@ export function Hero() {
         {showVideo && (
           <video
             className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-[1600ms]"
-            src={heroVideo.url}
             poster={heroPoster}
             autoPlay
             muted
             loop
             playsInline
-            preload="none"
+            preload="auto"
+            onCanPlay={(event) => {
+              void event.currentTarget.play().catch(() => undefined);
+            }}
             onPlaying={(e) => {
               e.currentTarget.style.opacity = "1";
             }}
-          />
+          >
+            <source src={heroVideo.url} type="video/mp4" />
+          </video>
         )}
       </motion.div>
 
