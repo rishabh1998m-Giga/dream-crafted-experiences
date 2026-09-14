@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import heroPoster from "@/assets/hero-poster.jpg";
-const heroVideo = { url: "/media/hero-indian.mp4" };
+const heroPoster = "/media/hero-birthday-poster.jpg";
+const heroVideo = { url: "/media/hero-birthday.mp4" };
 import { LineButton, MaskLines } from "./Primitives";
 
 export function Hero() {
@@ -29,7 +29,7 @@ export function Hero() {
       <motion.div className="absolute inset-0" style={{ y, scale }}>
         <img
           src={heroPoster}
-          alt="Indian guests celebrating at a premium event designed by Dream Corner"
+          alt="A premium Indian birthday celebration designed by Dream Corner"
           width={1920}
           height={1088}
           fetchPriority="high"
@@ -38,21 +38,26 @@ export function Hero() {
         {showVideo && (
           <video
             className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-[1600ms]"
-            src={heroVideo.url}
             poster={heroPoster}
             autoPlay
             muted
             loop
             playsInline
-            preload="none"
+            preload="auto"
+            onCanPlay={(event) => {
+              void event.currentTarget.play().catch(() => undefined);
+            }}
             onPlaying={(e) => {
               e.currentTarget.style.opacity = "1";
             }}
-          />
+          >
+            <source src="/media/hero-birthday.webm" type="video/webm" />
+            <source src={heroVideo.url} type="video/mp4" />
+          </video>
         )}
       </motion.div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(to_top,oklch(0.16_0.06_308/0.92),oklch(0.16_0.06_308/0.35)_55%,oklch(0.16_0.06_308/0.55))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_top,oklch(0.16_0.06_308/0.84),oklch(0.16_0.06_308/0.08)_58%,oklch(0.16_0.06_308/0.24))]" />
 
       <motion.div
         style={{ opacity: fade }}
@@ -77,13 +82,22 @@ export function Hero() {
           experiences.
         </motion.p>
 
-        <div className="mt-6 flex items-center gap-6 sm:mt-10 sm:gap-8">
+        <div className="mt-6 grid w-fit grid-cols-1 gap-3 min-[360px]:grid-cols-2 sm:mt-10 sm:gap-4">
           <motion.div
             initial={reduce ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
           >
             <LineButton href="#work">Selected Work</LineButton>
+          </motion.div>
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <LineButton href="#contact" className="bg-bone/10 text-bone backdrop-blur-sm">
+              Plan Your Event
+            </LineButton>
           </motion.div>
         </div>
       </motion.div>
