@@ -2,12 +2,12 @@ import { Reveal } from "./Primitives";
 import { gallery } from "@/lib/gallery";
 
 const posts = [
-  { src: gallery.peppaPlayland, alt: "Peppa themed children's party stage with balloons and cake table" },
-  { src: gallery.winterCarnival, alt: "Winter carnival birthday setup with marquee letters and ferris wheel" },
-  { src: gallery.bossBaby, alt: "Boss Baby themed first birthday decor in blue and black" },
-  { src: gallery.jungleCarnival, alt: "Jungle themed birthday stage with animal props and balloon arch" },
-  { src: gallery.bearlyWait, alt: "Teddy bear baby shower backdrop with pastel balloons" },
-  { src: gallery.fiftyFabulous, alt: "Pink and floral fiftieth birthday backdrop" },
+  { src: gallery.peppaPlayland, alt: "Peppa themed children's party stage with balloons and cake table", layout: "col-span-2 row-span-2 md:col-span-5 md:row-span-6", shape: "image-cut-arch" },
+  { src: gallery.winterCarnival, alt: "Winter carnival birthday setup with marquee letters and ferris wheel", layout: "col-span-1 row-span-1 md:col-span-3 md:row-span-3", shape: "image-cut-slope" },
+  { src: gallery.bossBaby, alt: "Boss Baby themed first birthday decor in blue and black", layout: "col-span-1 row-span-2 md:col-span-4 md:row-span-5", shape: "image-cut-notch" },
+  { src: gallery.jungleCarnival, alt: "Jungle themed birthday stage with animal props and balloon arch", layout: "col-span-1 row-span-2 md:col-span-3 md:row-span-5", shape: "image-cut-notch" },
+  { src: gallery.bearlyWait, alt: "Teddy bear baby shower backdrop with pastel balloons", layout: "col-span-1 row-span-1 md:col-span-4 md:row-span-3", shape: "image-cut-slope" },
+  { src: gallery.fiftyFabulous, alt: "Pink and floral fiftieth birthday backdrop", layout: "col-span-2 row-span-1 md:col-span-5 md:row-span-4", shape: "image-cut-arch" },
 ];
 
 export function Feed() {
@@ -27,15 +27,15 @@ export function Feed() {
           </a>
         </div>
 
-        <div className="mt-6 grid grid-cols-2 gap-1.5 sm:mt-8 sm:gap-2 md:grid-cols-3 md:gap-3">
+        <div className="mt-6 grid auto-rows-[8rem] grid-cols-2 gap-2 sm:mt-8 sm:auto-rows-[10rem] sm:gap-3 md:auto-rows-[4.5rem] md:grid-cols-12 md:gap-4">
           {posts.map((p, i) => (
-            <Reveal key={p.alt} delay={(i % 3) * 0.06} y={20}>
+            <Reveal key={p.alt} delay={(i % 3) * 0.06} y={20} className={p.layout}>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noreferrer"
                 data-cursor="OPEN"
-                className="group relative block aspect-square overflow-hidden"
+                className={`image-frame group relative block h-full overflow-hidden ${p.shape}`}
               >
                 <img
                   src={p.src}

@@ -7,7 +7,6 @@ import { Hero } from "@/components/dc/Hero";
 import { Story } from "@/components/dc/Story";
 import { Work } from "@/components/dc/Work";
 import { Services } from "@/components/dc/Services";
-import { Philosophy } from "@/components/dc/Philosophy";
 import { Proof } from "@/components/dc/Proof";
 import { Feed } from "@/components/dc/Feed";
 import { Contact } from "@/components/dc/Contact";
@@ -41,7 +40,6 @@ function Index() {
         <Story />
         <Work />
         <Services />
-        <Philosophy />
         <Proof />
         <Feed />
         <Contact />

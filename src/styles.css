@@ -200,6 +200,31 @@
   letter-spacing: 0;
 }
 
+/* Editorial image silhouettes — restrained geometry, never card-like. */
+@utility image-frame {
+  isolation: isolate;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border: 1px solid color-mix(in oklab, var(--brass) 45%, transparent);
+    clip-path: inherit;
+  }
+}
+
+@utility image-cut-arch {
+  clip-path: polygon(0 11%, 8% 3%, 23% 0, 77% 0, 92% 3%, 100% 11%, 100% 100%, 0 100%);
+}
+
+@utility image-cut-slope {
+  clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
+}
+
+@utility image-cut-notch {
+  clip-path: polygon(0 0, 82% 0, 100% 13%, 100% 100%, 0 100%);
+}
+
 @utility link-underline {
   position: relative;
   &::after {
