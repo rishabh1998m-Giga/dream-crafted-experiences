@@ -35,28 +35,28 @@ export function Story() {
             </Reveal>
 
             <div className="mt-10 hidden lg:block">
-              <motion.div style={{ y: yA }} className="relative w-[78%]">
+              <motion.div style={{ y: yA }} className="image-frame image-cut-slope relative ml-[7%] w-[76%] overflow-hidden">
                 <img
                   src={gallery.fantasyForest}
                   alt="Fantasy themed birthday installation with glowing arches and florals"
                   loading="lazy"
                   width={1200}
                   height={1504}
-                  className="h-[46vh] w-full object-cover"
+                  className="h-[46vh] w-full object-cover transition-transform duration-[1400ms] hover:scale-[1.035]"
                 />
               </motion.div>
             </div>
           </div>
 
           <div className="lg:col-span-5">
-            <motion.div style={{ y: yB }} className="relative">
+            <motion.div style={{ y: yB }} className="image-frame image-cut-arch relative ml-auto w-[92%] overflow-hidden sm:w-[84%] lg:w-full">
               <img
                 src={gallery.princessCastle}
                 alt="Pink princess castle themed birthday stage at dusk"
                 loading="lazy"
                 width={1200}
                 height={1600}
-                className="h-[58vh] min-h-[400px] max-h-[560px] w-full object-cover lg:h-[86vh] lg:max-h-none"
+                className="h-[58vh] min-h-[400px] max-h-[560px] w-full object-cover transition-transform duration-[1400ms] hover:scale-[1.035] lg:h-[86vh] lg:max-h-none"
               />
               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,oklch(0.17_0.075_310/0.5),transparent_55%)]" />
             </motion.div>

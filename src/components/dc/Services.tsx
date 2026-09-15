@@ -54,7 +54,7 @@ export function Services() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="pointer-events-none absolute right-4 top-1/2 z-20 hidden h-[340px] w-[260px] -translate-y-1/2 overflow-hidden lg:block"
+                className="image-frame image-cut-arch pointer-events-none absolute right-4 top-1/2 z-20 hidden h-[350px] w-[270px] -translate-y-1/2 overflow-hidden lg:block"
               >
                 <img
                   src={services[active]?.image}
