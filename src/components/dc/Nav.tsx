@@ -103,9 +103,8 @@ export function Nav() {
               <a
                 href="#contact"
                 data-cursor="ENQUIRE"
-                className="group relative inline-flex items-center overflow-hidden rounded-full border border-bone/30 bg-bone px-6 py-3 font-sans text-[10px] uppercase tracking-[0.22em] shadow-[0_8px_28px_rgba(0,0,0,0.18)] transition-all duration-500 hover:scale-[1.04] hover:border-brass hover:shadow-[0_10px_34px_rgba(211,185,140,0.2)]"
+                className="group relative inline-flex min-h-11 items-center overflow-hidden rounded-full border border-bone bg-bone px-6 py-3 font-sans text-[13px] font-semibold text-ink shadow-[0_8px_28px_rgba(0,0,0,0.18)] transition-all duration-500 hover:-translate-y-0.5 hover:border-brass hover:bg-brass hover:shadow-[0_12px_34px_rgba(0,0,0,0.24)]"
               >
-                <span className="absolute inset-0 translate-y-full bg-brass transition-transform duration-500 group-hover:translate-y-0" />
                 <span className="relative z-10 flex items-center gap-2 text-ink">
                   Plan Your Event
                   <svg

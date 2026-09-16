@@ -95,7 +95,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
           >
-            <LineButton href="#contact" className="bg-bone/10 text-bone backdrop-blur-sm">
+            <LineButton href="#contact">
               Plan Your Event
             </LineButton>
           </motion.div>
