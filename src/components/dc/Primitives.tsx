@@ -39,23 +39,29 @@ export function MaskLines({
   lineClassName,
   delay = 0,
   immediate = false,
+  inline = false,
 }: {
   lines: string[];
   className?: string;
   lineClassName?: string;
   delay?: number;
   immediate?: boolean;
+  /** Render inline (single-line headlines) instead of stacked blocks. */
+  inline?: boolean;
 }) {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.1 });
   const show = immediate || inView || reduce;
   return (
-    <span ref={ref} className={cn("block", className)}>
+    <span ref={ref} className={cn(inline ? "inline" : "block", className)}>
       {lines.map((line, i) => (
-        <span key={line + i} className="block overflow-hidden">
+        <span
+          key={line + i}
+          className={inline ? "inline-block overflow-hidden align-bottom" : "block overflow-hidden"}
+        >
           <motion.span
-            className={cn("block", lineClassName)}
+            className={cn(inline ? "inline-block" : "block", lineClassName)}
             initial={reduce ? false : { y: "110%" }}
             animate={show ? { y: "0%" } : { y: "110%" }}
             transition={{ duration: 1.15, delay: delay + i * 0.09, ease: [0.16, 1, 0.3, 1] }}
@@ -78,6 +84,7 @@ export function TypeLine({
   className,
   lineClassName,
   caretClassName,
+  inline = false,
 }: {
   text: string;
   startDelay?: number;
@@ -88,6 +95,8 @@ export function TypeLine({
   className?: string;
   lineClassName?: string;
   caretClassName?: string;
+  /** Render inline (single-line headlines) instead of its own block line. */
+  inline?: boolean;
 }) {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLSpanElement>(null);
