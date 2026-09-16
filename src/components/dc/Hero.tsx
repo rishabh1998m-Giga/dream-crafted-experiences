@@ -57,36 +57,37 @@ export function Hero() {
         )}
       </motion.div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(to_top,oklch(0.16_0.06_308/0.84),oklch(0.16_0.06_308/0.08)_58%,oklch(0.16_0.06_308/0.24))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_top,oklch(0.16_0.06_308/0.8),oklch(0.16_0.06_308/0.32)_45%,oklch(0.16_0.06_308/0.2)_70%,oklch(0.16_0.06_308/0.3))]" />
 
       <motion.div
         style={{ opacity: fade }}
-        className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-5 pb-8 sm:px-6 sm:pb-10 md:px-10 md:pb-14"
+        className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col items-center justify-center px-5 pb-16 text-center sm:px-6 md:px-10"
       >
-        <h1 className="display text-[2rem] leading-[1.06] text-bone sm:text-5xl lg:text-6xl">
-          <MaskLines lines={["Dreams,"]} delay={0.15} immediate />
+        <h1 className="display whitespace-nowrap text-[clamp(1.05rem,4.6vw,4rem)] leading-[1.12] text-bone">
+          <MaskLines lines={["Dreams,"]} delay={0.15} immediate inline />
           <TypeLine
-            text="crafted into"
+            text=" crafted into"
             immediate
             startDelay={900}
             speed={62}
             holdMs={1100}
             lineClassName="italic"
+            inline
           />
-          <MaskLines lines={["experiences."]} delay={2.05} immediate />
+          <MaskLines lines={[" experiences."]} delay={2.05} immediate inline />
         </h1>
 
         <motion.p
           initial={reduce ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.75, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-5 max-w-[21rem] font-sans text-[13px] leading-6 text-bone/80 sm:mt-8 sm:max-w-md sm:text-sm sm:leading-[1.8]"
+          className="mt-5 max-w-md font-sans text-[13px] leading-6 text-bone/80 sm:mt-7 sm:text-sm sm:leading-[1.8]"
         >
           Every great celebration begins with a vision. We turn your ideas into unforgettable
           experiences.
         </motion.p>
 
-        <div className="mt-6 grid w-fit grid-cols-1 gap-3 min-[360px]:grid-cols-2 sm:mt-10 sm:gap-4">
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:mt-9 sm:gap-4">
           <motion.div
             initial={reduce ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
