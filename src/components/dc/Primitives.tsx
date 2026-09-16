@@ -132,13 +132,20 @@ export function TypeLine({
   }, [show, reduce, text, startDelay, speed, holdMs]);
 
   return (
-    <span ref={ref} aria-label={text} className={cn("block", className)}>
-      <span className="relative block">
+    <span ref={ref} aria-label={text} className={cn(inline ? "inline" : "block", className)}>
+      <span className={cn("relative", inline ? "inline" : "block")}>
         {/* Invisible full text reserves the line's final size — no layout shift while typing. */}
-        <span aria-hidden className="invisible block">
+        <span aria-hidden className={cn("invisible", inline ? "inline whitespace-pre" : "block")}>
           {text}
         </span>
-        <span aria-hidden className={cn("absolute inset-0 block", lineClassName)}>
+        <span
+          aria-hidden
+          className={cn(
+            "absolute inset-0",
+            inline ? "inline whitespace-pre" : "block",
+            lineClassName,
+          )}
+        >
           <span className="whitespace-pre-wrap">{text.slice(0, count)}</span>
           {caretOn && (
             <span
