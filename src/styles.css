@@ -275,6 +275,22 @@
   }
 }
 
+/* Typewriter caret */
+@keyframes caret-blink {
+  0%,
+  55% {
+    opacity: 1;
+  }
+  56%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-caret-blink {
+  animation: caret-blink 1.05s steps(1) infinite;
+}
+
 .animate-marquee {
   animation: marquee-x 38s linear infinite;
 }

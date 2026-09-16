@@ -64,12 +64,16 @@ export function Hero() {
         className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-5 pb-8 sm:px-6 sm:pb-10 md:px-10 md:pb-14"
       >
         <h1 className="display text-[2rem] leading-[1.06] text-bone sm:text-5xl lg:text-6xl">
-          <MaskLines
-            lines={["Dreams,", "crafted into", "experiences."]}
-            delay={0.15}
+          <MaskLines lines={["Dreams,"]} delay={0.15} immediate />
+          <TypeLine
+            text="crafted into"
             immediate
-            lineClassName="[&:nth-child(2)]:italic"
+            startDelay={900}
+            speed={62}
+            holdMs={1100}
+            lineClassName="italic"
           />
+          <MaskLines lines={["experiences."]} delay={2.05} immediate />
         </h1>
 
         <motion.p
