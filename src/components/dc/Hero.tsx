@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform, useReducedMotion } from "motion/react"
 import { useEffect, useRef, useState } from "react";
 const heroPoster = "/media/hero-birthday-poster.jpg";
 const heroVideo = { url: "/media/hero-birthday.mp4" };
-import { LineButton, MaskLines } from "./Primitives";
+import { LineButton, MaskLines, TypeLine } from "./Primitives";
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
