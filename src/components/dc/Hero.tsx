@@ -57,7 +57,7 @@ export function Hero() {
         )}
       </motion.div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(to_top,oklch(0.16_0.06_308/0.84),oklch(0.16_0.06_308/0.08)_58%,oklch(0.16_0.06_308/0.24))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_top,oklch(0.16_0.06_308/0.8),oklch(0.16_0.06_308/0.32)_45%,oklch(0.16_0.06_308/0.2)_70%,oklch(0.16_0.06_308/0.3))]" />
 
       <motion.div
         style={{ opacity: fade }}
