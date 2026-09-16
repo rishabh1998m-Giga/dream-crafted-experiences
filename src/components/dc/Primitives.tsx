@@ -68,6 +68,83 @@ export function MaskLines({
   );
 }
 
+/** Character-by-character typewriter reveal with a blinking caret. */
+export function TypeLine({
+  text,
+  startDelay = 0,
+  speed = 55,
+  holdMs = 900,
+  immediate = false,
+  className,
+  lineClassName,
+  caretClassName,
+}: {
+  text: string;
+  startDelay?: number;
+  speed?: number;
+  /** How long the caret keeps blinking after the text completes. */
+  holdMs?: number;
+  immediate?: boolean;
+  className?: string;
+  lineClassName?: string;
+  caretClassName?: string;
+}) {
+  const reduce = useReducedMotion();
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, amount: 0.1 });
+  const show = immediate || inView || reduce;
+  const [count, setCount] = useState(0);
+  const [caretOn, setCaretOn] = useState(!reduce);
+
+  useEffect(() => {
+    if (!show) return;
+    if (reduce) {
+      setCount(text.length);
+      setCaretOn(false);
+      return;
+    }
+    let raf = 0;
+    let hold = 0;
+    const startAt = performance.now() + startDelay;
+    const tick = (now: number) => {
+      const n = Math.min(text.length, Math.max(0, Math.floor((now - startAt) / speed)));
+      setCount(n);
+      if (n < text.length) {
+        raf = requestAnimationFrame(tick);
+      } else {
+        hold = window.setTimeout(() => setCaretOn(false), holdMs);
+      }
+    };
+    raf = requestAnimationFrame(tick);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.clearTimeout(hold);
+    };
+  }, [show, reduce, text, startDelay, speed, holdMs]);
+
+  return (
+    <span ref={ref} aria-label={text} className={cn("block", className)}>
+      <span className="relative block">
+        {/* Invisible full text reserves the line's final size — no layout shift while typing. */}
+        <span aria-hidden className="invisible block">
+          {text}
+        </span>
+        <span aria-hidden className={cn("absolute inset-0 block", lineClassName)}>
+          <span className="whitespace-pre-wrap">{text.slice(0, count)}</span>
+          {caretOn && (
+            <span
+              className={cn(
+                "animate-caret-blink ml-[0.12em] inline-block h-[0.82em] w-[3px] translate-y-[0.06em] rounded-full bg-brass",
+                caretClassName,
+              )}
+            />
+          )}
+        </span>
+      </span>
+    </span>
+  );
+}
+
 /** Magnetic wrapper — element drifts subtly toward the pointer. */
 export function Magnetic({
   children,
