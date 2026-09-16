@@ -133,23 +133,26 @@ export function LineButton({
   const inner = (
     <span
       className={cn(
-        "group relative inline-flex min-h-12 items-center gap-3 overflow-hidden border px-6 py-3 font-sans text-[10px] uppercase tracking-[0.2em] transition-colors duration-500 sm:gap-4 sm:px-8 sm:py-4 sm:text-[11px] sm:tracking-[0.28em]",
+        "group relative inline-flex min-h-12 items-center justify-center gap-3 overflow-hidden rounded-full border px-6 py-3 font-sans text-[13px] font-semibold transition-all duration-500 sm:min-h-[54px] sm:gap-4 sm:px-8 sm:py-4 sm:text-sm",
         tone === "brass"
-          ? "border-brass/60 text-brass hover:text-primary-foreground"
-          : "border-current text-foreground hover:text-background",
+          ? "border-bone bg-bone text-ink shadow-[0_10px_30px_rgba(0,0,0,0.18)] hover:border-brass hover:bg-brass hover:text-primary-foreground hover:shadow-[0_14px_38px_rgba(0,0,0,0.24)]"
+          : "border-ink bg-ink text-bone shadow-[0_10px_30px_rgba(0,0,0,0.14)] hover:border-brass hover:bg-brass hover:text-ink",
         className,
       )}
     >
-      <span
-        className={cn(
-          "absolute inset-0 -z-0 origin-bottom scale-y-0 transition-transform duration-[700ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-y-100",
-          tone === "brass" ? "bg-brass" : "bg-foreground",
-        )}
-      />
       <span className="relative z-10">{children}</span>
-      <span className="relative z-10 transition-transform duration-500 group-hover:translate-x-1">
-        →
-      </span>
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="relative z-10 h-4 w-4 transition-transform duration-500 group-hover:translate-x-1"
+      >
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </svg>
     </span>
   );
 
