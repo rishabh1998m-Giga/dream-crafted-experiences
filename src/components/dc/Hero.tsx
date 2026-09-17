@@ -66,7 +66,7 @@ export function Hero() {
         <h1 className="display whitespace-nowrap text-[clamp(1.05rem,4.6vw,4rem)] leading-[1.12] text-bone">
           <MaskLines lines={["Dreams,"]} delay={0.15} immediate inline />
           <TypeLine
-            text=" crafted into"
+            text={" crafted into"}
             immediate
             startDelay={900}
             speed={62}
@@ -74,7 +74,7 @@ export function Hero() {
             lineClassName="italic"
             inline
           />
-          <MaskLines lines={[" experiences."]} delay={2.05} immediate inline />
+          <MaskLines lines={[" experiences."]} delay={2.05} immediate inline />
         </h1>
 
         <motion.p
